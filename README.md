@@ -6,6 +6,7 @@
 
 
 --- Change Log ---
+
 1.1.7
 * Removed ununsed images 
 * Moved Google Calendar API and Weather setting to /app\public\settings.js
