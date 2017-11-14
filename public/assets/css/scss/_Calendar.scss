@@ -1,0 +1,43 @@
+/*
+  Calendar
+*/
+/* Hide Stuff */
+.calendarHide, .calendarHide + tr, .calendarHide + tr a, .fc-toolbar.fc-header-toolbar{
+display: none !important;
+}
+
+.calendarHide + tr + tr td{
+    border-top-width: 0px;
+}
+.fc-scroller {
+	height: auto !important;
+	overflow: hidden !important;
+}
+
+td.fc-widget-header {
+	font-size: .6em;
+	padding-top: 6px;
+	padding-bottom: 6px;
+}
+
+td.fc-list-item-time.fc-widget-content {
+    width: 90px;
+    padding-right: 0;
+}
+
+.fc-list-item-title a {
+    display: block;
+    text-transform: capitalize !important;
+    text-overflow: ellipsis;
+}
+
+td.fc-list-item-title.fc-widget-content {
+    padding-right: 4px;
+    padding-left: 0;
+    font-size: 0.9em;
+}
+
+ tr.fc-list-heading .fc-widget-header {
+	padding: 3px 14px;
+	padding-left: 3vw;
+}

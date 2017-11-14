@@ -1,0 +1,41 @@
+/*
+	Upcoming Forecasts
+*/
+#UpcomingForecasts {
+	display: 		flex;
+	align-items: 	center;
+	height: 		25vh;
+
+		.forecast {
+			flex-grow: 		5;
+			text-align: 	center;
+		}
+		
+		/* forcast Date */
+		.forcastDate{
+			font-weight: 100;
+			font-size: $font-size;
+			padding-bottom: 4px;
+		}
+
+		/* Icon */
+		.icon{
+			padding: 4px 0;
+			display: inline-block;
+			width: 100%;
+
+			i{
+				font-size: $xl-font-size * 1.15;
+			}
+		}
+
+		/* desc */
+		.desc{
+			margin-top: -4px;
+		}
+
+		/*High Temp / Low Temp*/
+		.highTemp.lowTemp{
+			font-size: $sm-font-size;
+		}
+}
