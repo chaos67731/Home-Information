@@ -2,4 +2,7 @@
 *.sublime-project
 *.sublime-workspace
 public/settings.js
+node_modules/*
+node_modules
 
+package-lock\.json
