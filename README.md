@@ -21,6 +21,7 @@ There is a settings file that you will need to edit, to get the right weather an
 
 
 
+
 --- Change Log ---
 
 **1.1.7**
@@ -42,5 +43,9 @@ There is a settings file that you will need to edit, to get the right weather an
 **1.0.0**
 * Built this in HTML 
 
+
+
+## Screenshot If You Want to See It
+![Alt text](/public/assets/img/screenshot.png)
 
 
