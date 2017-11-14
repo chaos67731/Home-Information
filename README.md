@@ -24,6 +24,9 @@ There is a settings file that you will need to edit, to get the right weather an
 
 --- Change Log ---
 
+**1.1.8**
+* Rebuild Crypto sections 
+
 **1.1.7**
 * Removed unused images 
 * Moved Google Calendar API and Weather setting to /app\public\settings.js
