@@ -3,25 +3,44 @@
 ## npm run build 
 ## npm pack
 
+There is a settings file that you will need to edit, to get the right weather and connect your Google Calendar.  If you do not, it will show the weather for Las Vegas and it is using dummy data for the Calendar.
+
+```
+\public\settings.js
+```
+
+### Weather 
+* Go here https://www.yahoo.com/news/weather
+* Change locatio 
+* After the page updates, your numbers should be at the end of the URL 
+
+### Google Calendar
+* Follow the steps on this page from fullcalendar
+	* https://fullcalendar.io/docs/google_calendar/ 
+* In the settings.js file, make sure you change this var ```CalndUse``` to fullCalendar when you are ready to use fullcalendar.io
+
 
 
 --- Change Log ---
 
-####1.1.7
-* Removed ununsed images 
+**1.1.7**
+* Removed unused images 
 * Moved Google Calendar API and Weather setting to /app\public\settings.js
  * By default Weather is set to Las Vegas
  * By default Calendar is using dummy information 
 
-####1.1.6
+**1.1.6**
 * Cleaned up Quote List (Still needs to be better)
-* Removed calling for js files and made files jsx... What ever the point to that is...
+* Removed calling for js files and made files jsx... Whatever the point to that is...
 
-####1.1.5
+**1.1.5**
 * Moved Header to react 
 * Moved footer count down to react 
 * Started using versions 
 
 
-####1.0.0
+**1.0.0**
 * Built this in HTML 
+
+
+
