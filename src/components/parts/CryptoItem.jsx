@@ -12,7 +12,7 @@ class CryptoItem extends Component {
 		}
 	}
 
-	componentDidMount(){
+	fetchResult = () => {
 		fetch(urlForUsername(this.props.cryptocoin))
 		.then(response =>{
 			if(!response.ok){
@@ -30,6 +30,11 @@ class CryptoItem extends Component {
 				requestFailed: true
 			})
 		})
+	}
+
+	componentDidMount(){
+		this.fetchResult()
+		setInterval(this.fetchResult, 30000)
 	}
 
     render() {
