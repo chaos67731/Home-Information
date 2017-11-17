@@ -10,6 +10,7 @@ class CurrentWeather extends Component {
 		this.state = {
 			requestFailed: false
 		}
+		this.fetchWeatherResult = this.fetchWeatherResult.bind(this);
 	}
 
 	fetchWeatherResult = () => {
@@ -36,10 +37,9 @@ class CurrentWeather extends Component {
 
 	componentDidMount(){
 		this.fetchWeatherResult()
-		setInterval(this.fetchWeatherResult, 5000) 
+		setInterval(this.fetchWeatherResult, 60000) 
 	}
 
-	
   render(){
   	// jQuery
   	function HideShowWeather() {
@@ -91,10 +91,6 @@ class CurrentWeather extends Component {
 		ChangeTheDirection();
 	});
 	setInterval(function() { ChangeTheDirection(); }, 10000);
-
-
-
-
 
 	// The Icons
  	function ChangeTheWeatherIcon() {
@@ -204,7 +200,7 @@ class CurrentWeather extends Component {
 	$(function() {
 		ChangeTheWeatherIcon();
 	});
-	setInterval(function() { ChangeTheWeatherIcon(); }, 20000);
+	setInterval(function() { ChangeTheWeatherIcon(); }, 10000);
 
 	// End jQuery
 	
