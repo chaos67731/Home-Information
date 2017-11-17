@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 // import $ from 'jquery';
+import CryptoMarketCap from './parts/CryptoMarketCap';
 
 const urlForUsername = cryptocoin => `https://api.coinmarketcap.com/v1/ticker/${cryptocoin}/`
 
@@ -49,7 +50,7 @@ class CryptoItem extends Component {
 					{this.state.cryptoData.name}:
 				</li>
 				<li>
-					$ <span id={ `${this.state.cryptoData.symbol}Price` }>{this.state.cryptoData.price_usd}</span>
+					$ <span id={ `${this.state.cryptoData.symbol}Price` }>{this.state.cryptoData.price_usd}<CryptoMarketCap /></span>
 				</li>
 				<li className="PreCentChange">
 					<span id={ `${this.state.cryptoData.symbol}PriceChange` }>{this.state.cryptoData.percent_change_24h}</span><b>%</b>
