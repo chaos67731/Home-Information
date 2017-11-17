@@ -36,7 +36,7 @@ class CurrentWeather extends Component {
 
 	componentDidMount(){
 		this.fetchWeatherResult()
-		setInterval(this.fetchWeatherResult, 5000) 
+		setInterval(this.fetchWeatherResult, 60000) 
 	}
 
 	
@@ -62,7 +62,7 @@ class CurrentWeather extends Component {
 	$(function() {
 		HideShowWeather();
 	});
-	setInterval(function() { HideShowWeather(); }, 5000);
+	setInterval(function() { HideShowWeather(); }, 60000);
 
 	// The Direction
 	function ChangeTheDirection() {
@@ -90,7 +90,7 @@ class CurrentWeather extends Component {
 	$(function() {
 		ChangeTheDirection();
 	});
-	setInterval(function() { ChangeTheDirection(); }, 10000);
+	setInterval(function() { ChangeTheDirection(); }, 60000);
 
 
 
@@ -204,7 +204,7 @@ class CurrentWeather extends Component {
 	$(function() {
 		ChangeTheWeatherIcon();
 	});
-	setInterval(function() { ChangeTheWeatherIcon(); }, 20000);
+	setInterval(function() { ChangeTheWeatherIcon(); }, 60000);
 
 	// End jQuery
 	
