@@ -10,6 +10,8 @@ class CryptoItem extends Component {
 		this.state = {
 			requestFailed: false
 		}
+		// bind fetchResult to `this`
+		this.fetchResult = this.fetchResult.bind(this);
 	}
 
 	fetchResult = () => {
