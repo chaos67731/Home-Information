@@ -24,6 +24,12 @@ There is a settings file that you will need to edit, to get the right weather an
 
 --- Change Log ---
 
+**1.1.9**
+* Rebuild Top Weather Section (CurrentWeather)
+	* Remove the need for weather.js
+	* Call and update Yahoo Weather API every 60 seconds
+
+
 **1.1.8**
 * Rebuild Crypto sections 
 

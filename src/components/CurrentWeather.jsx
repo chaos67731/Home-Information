@@ -1,55 +1,82 @@
 import React, { Component } from 'react';
-import $ from 'jquery';
+// import $ from 'jquery';
 
-class CurrentWeather extends Component{
+const urlForUsername = weathernow => `https://query.yahooapis.com/v1/public/yql?q=select+*+from+weather.forecast+where+woeid=${weathernow}&format=json`
+
+class CurrentWeather extends Component {
+
+	constructor(props){
+		super(props)
+		this.state = {
+			requestFailed: false
+		}
+	}
+
+	fetchWeatherResult = () => {
+		// Dealing with json call
+		fetch(urlForUsername(this.props.weathernow))
+			.then(response =>{
+				if(!response.ok){
+					throw Error("Network request failed")
+				}
+				return response
+			})
+			.then(d => d.json())
+			.then(d => {
+				this.setState({
+					weatherData: d['query'].results.channel
+				})
+			},() => {
+				this.setState({
+					requestFailed: true
+				})
+			})
+		// Dealing With Weather Icon
+	}
+
+	componentDidMount(){
+		this.fetchWeatherResult()
+		setInterval(this.fetchWeatherResult, 30000) 
+	}
+
 	
   render(){
-  	// JS
-	function HideShowWeather() {
-		if($('#CurrentTemp .temp').html() === $('#CurrentTemp .windchill').html()){
-			$("#TheWindChill").hide();
-		}else if($('#CurrentTemp .temp').html() < $('#CurrentTemp .windchill').html()){
-			$("#TheWindChill").hide();
-		}else{
-			$("#TheWindChill").show();
-		}
+	if(this.state.requestFailed) return <p>Failed...</p>
+	if(!this.state.weatherData) return <p>Loading...</p>
 
-		if($('#forecast1 .WindSpeed').html() < "5"){
-			$("#forecast1 .Speed").hide();
-		}else{
-			$("#forecast1 .Speed").show();
-		}		
-	}
-	$(function() {
-		HideShowWeather();
-	});
-	setInterval(function() { HideShowWeather(); }, 1000);
-
-
-  	
     return(
 	<div id="CurrentWeather">
-		<div id="currently">
+
+		<div id="TheCurrentWeather">
 			<div className="CurrentlyItem" id="CurrentIcon">
-				<div className="icon"></div>
-				<div className="desc"></div>
+				<div className="icon" id="WeatherIcon">
+					{this.state.weatherData.item.forecast[0].code}
+				</div>
+				<div className="desc">
+					{this.state.weatherData.item.condition.text}
+				</div>
 			</div>
 			<div className="CurrentlyItem" id="CurrentTemp">
-				Curent <span className="temp"></span>
+				Curent <span className="temp">
+					{this.state.weatherData.item.condition.temp}°
+				</span>
 				<div id="TheWindChill">
-					Windchill: <span className="windchill"></span>
+					Windchill: {this.state.weatherData.wind.chill}°
 				</div>	
 			</div>
-			<div className="forecast CurrentlyItem" id="forecast1">
-				<div className="highTemp"><b>High</b> <span className="high"></span></div>
-				<div className="lowTemp"><b>Low</b> <span className="low"></span></div>
-				<div className="Speed"><b>Wind</b> <span className="WindSpeed"></span> <small>mph</small><small id="Direction"></small></div>
+			<div className="CurrentlyItem" id="CurrentWeatherSide">
+				<div className="highTemp"><b>High</b> <span className="high">{this.state.weatherData.item.forecast[0].high}°</span></div>
+				<div className="lowTemp"><b>Low</b> <span className="low">{this.state.weatherData.item.forecast[0].low}°</span></div>
+				<div className="Speed">
+					<b>Wind</b> <span>{this.state.weatherData.wind.speed}</span> <small>mph</small>
+					<small id="TheDirection">{this.state.weatherData.wind.direction}</small>
+				</div>
 			</div>	
 		</div>
-		<div id="RiseSet">
-			<div className="RiseSetItem Sunrise">Sunrise <span id="Sunrise"></span></div>
-			<div className="RiseSetItem Sunset">Sunset  <span id="Sunset"></span></div>
-		</div>		
+		<div id="TheRiseSet">
+			<div className="RiseSetItem TheSunrise">Sunrise {this.state.weatherData.astronomy.sunrise}</div>
+			<div className="RiseSetItem TheSunset">Sunset {this.state.weatherData.astronomy.sunset}</div>
+		</div>
 	</div>
     );
   }

@@ -6,3 +6,9 @@ node_modules/*
 node_modules
 
 package-lock\.json
+
+build/\.backup/
+
+build/
+
+\.backup/

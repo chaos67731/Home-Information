@@ -32,20 +32,20 @@
 	}
 
 	function fillCurrently(currently) {
-		var icon = $('#currently .icon');
-		var desc = $('#currently .desc');
-		var temp = $('#currently .temp');
+		// var icon = $('#currently .icon');
+		// var desc = $('#currently .desc');
+		// var temp = $('#currently .temp');
 
-		// Insert the current details. Icons may be changed by editing the icons array.
-		if (icon.length) {
-			icon.html(icons[currently.code]);
-		}
-		if (desc.length) {
-			desc.html(currently.text);
-		}
-		if (temp.length) {
-			temp.html(resolveTemp(currently.temp));
-		}
+		// // Insert the current details. Icons may be changed by editing the icons array.
+		// if (icon.length) {
+		// 	icon.html(icons[currently.code]);
+		// }
+		// if (desc.length) {
+		// 	desc.html(currently.text);
+		// }
+		// if (temp.length) {
+		// 	temp.html(resolveTemp(currently.temp));
+		// }
 	}
 
 	function fillForecast(day, forecast) {
@@ -145,7 +145,7 @@
 		}
 
 	 	if ($('#Direction').length) {
-			$('#Direction').html(WindDir);
+			// $('#Direction').html(WindDir);
 		}
 			// console.log(WindDir);
 			// console.log(Direction);
