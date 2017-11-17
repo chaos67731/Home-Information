@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
 // import $ from 'jquery';
 
-import Header             from "./components/Header";
+import Header         from "./components/Header";
 import CurrentWeather     from "./components/CurrentWeather";
 import UpcomingForecasts  from "./components/UpcomingForecasts";
-import BottomTwo          from "./components/BottomTwo";
-import BottomImage        from "./components/BottomImage";
+import BottomTwo      from "./components/BottomTwo";
+import BottomImage      from "./components/BottomImage";
 
 
 class App extends Component{
@@ -13,7 +13,7 @@ class App extends Component{
     return(
     <div className="App"> 
       <Header />
-      <CurrentWeather weathernow="12795450" />
+      <CurrentWeather />
       <UpcomingForecasts />
       <BottomTwo/>
       <BottomImage />

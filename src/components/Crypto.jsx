@@ -27,7 +27,7 @@ class Crypto extends Component{
 	$(function() {
 		ganttEach();
 	});
-	setInterval(function() { ganttEach(); }, 15000);
+	setInterval(function() { ganttEach(); }, 5000);
 
     return(
 		<div id="CryptoItems">

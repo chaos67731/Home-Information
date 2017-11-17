@@ -5,7 +5,7 @@
     position: relative;
 	color: $DarkText;
 }
-	#TheCurrentWeather {
+	#currently {
 		display: table;
 		width: 100%;
 		table-layout: fixed;
@@ -41,7 +41,7 @@
 		}
 	}
 	/* forecast 1 */
-	#CurrentWeatherSide{
+	#forecast1{
 		div{
 			text-align: left;
 			padding-left: 8px;
@@ -61,7 +61,7 @@
 			}
 		}
 
-		#TheDirection{
+		#Direction{
 			display: block;
 			margin-left: 45px;
 			margin-top: -4px;
@@ -73,7 +73,7 @@
 /*
 	Sunset / Sun Rise
 */
-#TheRiseSet {
+#RiseSet {
 	font-size: 0px;
 	position: absolute;
 	bottom: 0;
@@ -85,11 +85,11 @@
 		width: 50%;
 		display: inline-block;
 
-			&.TheSunrise {
+			&.Sunrise {
 				text-align: right;
 				padding-right: 14px;
 			}
-			&.TheSunset {
+			&.Sunset {
 				text-align: left;
 				padding-left: 14px;
 			}   
