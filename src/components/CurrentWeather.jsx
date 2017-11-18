@@ -44,9 +44,9 @@ class CurrentWeather extends Component {
   	// jQuery
   	function HideShowWeather() {
   		// Hide Wind Chilld if current temp is the same or above 
-		if($('#CurrentTemp .temp').html() === $('#CurrentTemp #TheWindChill span').html()){
+		if($('.js-CurrentWeatherTemp').html() === $('.js-CurrentWeatherWindChill').html()){
 			$("#TheWindChill").hide();
-		}else if($('#CurrentTemp .temp').html() < $('#CurrentTemp #TheWindChill span').html()){
+		}else if($('.js-CurrentWeatherTemp').html() < $('.js-CurrentWeatherWindChill').html()){
 			$("#TheWindChill").hide();
 		}else{
 			$("#TheWindChill").show();
@@ -219,10 +219,10 @@ class CurrentWeather extends Component {
 			</div>
 			<div className="CurrentlyItem" id="CurrentTemp">
 				Curent <span className="temp">
-					{this.state.weatherData.item.condition.temp}°
+					<span className="js-CurrentWeatherTemp">{this.state.weatherData.item.condition.temp}</span>°
 				</span>
 				<div id="TheWindChill">
-					Windchill: <span>{this.state.weatherData.wind.chill}</span>°
+					Windchill: <span className="js-CurrentWeatherWindChill">{this.state.weatherData.wind.chill}</span>°
 				</div>	
 			</div>
 			<div className="CurrentlyItem" id="CurrentWeatherSide">

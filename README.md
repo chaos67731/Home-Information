@@ -12,7 +12,9 @@ There is a settings file that you will need to edit, to get the right weather an
 ### Weather  
 * Go here https://www.yahoo.com/news/weather 
 * Change locatio  
-* After the page updates, your numbers should be at the end of the URL  
+* After the page updates, your numbers should be at the end of the URL
+* Update weathernow and weatherforecasts in /src/Appjs
+  * By default it is set to "12795450"
  
 ### Google Calendar 
 * Follow the steps on this page from fullcalendar 

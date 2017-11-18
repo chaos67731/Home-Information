@@ -4,7 +4,7 @@ class CryptoItemBit extends Component{
   render(){
     return(
       <li> 
-        {this.props.listNameFromParent.name} :
+        {this.props.CryptoItemInfoBit.name} :
       </li>
 
     );

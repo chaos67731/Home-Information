@@ -46,7 +46,7 @@ class CryptoItem extends Component {
    	
         return(
 			<ul className="CryptoItem" data-sort={ `${this.state.cryptoData.percent_change_24h}` } id={ `${this.state.cryptoData.symbol}PriceChangeID` }>
-				<CryptoItemBit listNameFromParent={this.state.cryptoData}/>
+				<CryptoItemBit CryptoItemInfoBit={this.state.cryptoData}/>
 				<li>
 					$ <span id={ `${this.state.cryptoData.symbol}Price` }>{this.state.cryptoData.price_usd} </span>
 				</li>

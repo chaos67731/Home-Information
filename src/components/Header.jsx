@@ -4,7 +4,6 @@ import Clock from 'react-live-clock';
 class Header extends Component{
 
   render(){
-
     return(
 		<div id="TimeDate">
 			<div id="TheTime">
