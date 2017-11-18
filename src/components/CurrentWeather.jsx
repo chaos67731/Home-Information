@@ -204,7 +204,20 @@ class CurrentWeather extends Component {
 
 	// End jQuery
 	
-	if(this.state.requestFailed) return <p>Failed...</p>
+	if(this.state.requestFailed) return(
+		<div id="CurrentWeather">
+			<div id="TheCurrentWeather">
+				<center>
+					<h2>
+						<br />
+						Something Went wrong.... 
+						<br />
+						Did you forget to pay the internet bill??
+					</h2>					
+				</center>
+			</div>
+		</div>
+	);
 	if(!this.state.weatherData) return <p>Loading...</p>
 
     return(
