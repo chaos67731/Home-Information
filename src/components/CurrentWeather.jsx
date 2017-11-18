@@ -212,7 +212,7 @@ class CurrentWeather extends Component {
 
 		<div id="TheCurrentWeather">
 			<div className="CurrentlyItem" id="CurrentIcon">
-				<div className="icon" id="WeatherIcon" data-currenticon={this.state.weatherData.item.forecast[0].code}></div>
+				<div className="icon" id="WeatherIcon" data-currenticon={this.state.weatherData.item.condition.code}></div>
 				<div className="desc">
 					{this.state.weatherData.item.condition.text}
 				</div>
