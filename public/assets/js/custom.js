@@ -19,24 +19,6 @@
 	}
 	refreshAt(24,00,0);
 	refreshAt(14,11,0);
- 
-/*
-	Weather Forcat Date
-	\src\components\UpcomingForecasts.js
-	import moment from 'moment'
-*/
-	function UpcomingForecastsDate() {
-		$("#date2").text(moment().add(1, 'days').format('ddd MMM Do'));
-		$("#date3").text(moment().add(2, 'days').format('ddd MMM Do'));
-		$("#date4").text(moment().add(3, 'days').format('ddd MMM Do'));
-		$("#date5").text(moment().add(4, 'days').format('ddd MMM Do'));
-		$("#date6").text(moment().add(5, 'days').format('ddd MMM Do'));
-	}
-	$(function() {
-		UpcomingForecastsDate();
-	});
-	setInterval(function() { UpcomingForecastsDate(); }, 5000);
-
 /*  
 	Calendar
 	\src\components\CalendarView.js

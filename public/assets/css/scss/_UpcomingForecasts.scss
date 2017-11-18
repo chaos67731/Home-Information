@@ -6,20 +6,20 @@
 	align-items: 	center;
 	height: 		25vh;
 
-		.forecast {
+		.TheForecast {
 			flex-grow: 		5;
 			text-align: 	center;
 		}
 		
 		/* forcast Date */
-		.forcastDate{
+		.TheForecastDate{
 			font-weight: 100;
 			font-size: $font-size;
 			padding-bottom: 4px;
 		}
 
 		/* Icon */
-		.icon{
+		.TheIcon{
 			padding: 4px 0;
 			display: inline-block;
 			width: 100%;
@@ -30,12 +30,12 @@
 		}
 
 		/* desc */
-		.desc{
+		.TheDesc{
 			margin-top: -4px;
 		}
 
 		/*High Temp / Low Temp*/
-		.highTemp.lowTemp{
+		.ThehighTemp.ThelowTemp{
 			font-size: $sm-font-size;
 		}
 }

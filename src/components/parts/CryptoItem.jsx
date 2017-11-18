@@ -11,7 +11,7 @@ class CryptoItem extends Component {
 		this.state = {
 			requestFailed: false
 		}
-		// bind fetchResult to `this`
+		
 		this.fetchResult = this.fetchResult.bind(this);
 	}
 
@@ -46,9 +46,7 @@ class CryptoItem extends Component {
    	
         return(
 			<ul className="CryptoItem" data-sort={ `${this.state.cryptoData.percent_change_24h}` } id={ `${this.state.cryptoData.symbol}PriceChangeID` }>
-			 
 				<CryptoItemBit listNameFromParent={this.state.cryptoData}/>
-				 
 				<li>
 					$ <span id={ `${this.state.cryptoData.symbol}Price` }>{this.state.cryptoData.price_usd} </span>
 				</li>
@@ -56,8 +54,6 @@ class CryptoItem extends Component {
 					<span id={ `${this.state.cryptoData.symbol}PriceChange` }>{this.state.cryptoData.percent_change_24h}</span><b>%</b>
 				</li>
 			</ul>
-
-
         );
     }
 }

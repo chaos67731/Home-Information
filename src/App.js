@@ -14,7 +14,7 @@ class App extends Component{
     <div className="App"> 
       <Header />
       <CurrentWeather weathernow="12795450"/>
-      <UpcomingForecasts />
+      <UpcomingForecasts weatherforecasts="12795450"/>
       <BottomTwo/>
       <BottomImage />
     </div>
