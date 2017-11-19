@@ -54,8 +54,9 @@ class CurrentWeather extends Component {
 		}else{
 			$("#TheWindChill").show();
 		}
+
 		// Hide wind info if below 5mph
-		if($('#CurrentWeatherSide .TheWindSpeed').html() < "05"){
+		if($('#CurrentWeatherSide .TheWindSpeed').html() < "5"){
 			$("#CurrentWeatherSide .Speed").hide();
 		}else{
 			$("#CurrentWeatherSide .Speed").show();

@@ -6,7 +6,6 @@ class CryptoItemBit extends Component{
       <li> 
         {this.props.CryptoItemInfoBit.name} :
       </li>
-
     );
   }
 }

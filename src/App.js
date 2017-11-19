@@ -5,9 +5,6 @@ import CurrentWeather     	from "./components/CurrentWeather";
 import UpcomingForecasts  	from "./components/UpcomingForecasts";
 import BottomTwo          	from "./components/BottomTwo";
 import BottomImage        	from "./components/BottomImage";
-// import Test					from "./components/parts/Test";
-
-
 
 class App extends Component{
   render(){
