@@ -39,7 +39,6 @@
         timeMin: moment().subtract(12, 'hours').format(),
         timeMax: moment().add(3, 'months').format()
     });
- 	console.log("Things Loadind");
 }
 
 $(function () {
