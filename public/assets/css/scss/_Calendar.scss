@@ -1,43 +1,88 @@
 /*
   Calendar
 */
-/* Hide Stuff */
-.calendarHide, .calendarHide + tr, .calendarHide + tr a, .fc-toolbar.fc-header-toolbar{
-display: none !important;
+/* Things to hide  */
+.date .theTime{
+    display: none !important;
 }
+    .time {
+        font-size: 0;
+            .theTime {
+            font-size: $font-size * .80;
+        }
+    }
+/* The UL  */
+#events-upcoming {
+    border-right: 1px solid #0da4ff;
 
-.calendarHide + tr + tr td{
-    border-top-width: 0px;
-}
-.fc-scroller {
-	height: auto !important;
-	overflow: hidden !important;
-}
+    li {
+        font-size:  $font-size * .80;
+        position: relative;
 
-td.fc-widget-header {
-	font-size: .6em;
-	padding-top: 6px;
-	padding-bottom: 6px;
-}
+        &.EventsStack {
+            display: block;
+            .date {
+             display: none !important;
+            }    
+        }
+    }
 
-td.fc-list-item-time.fc-widget-content {
-    width: 90px;
-    padding-right: 0;
-}
+    .date {
+        background: $DarkText;
+        display: block;
+        padding: 3px 14px;
+        border-bottom: 1px solid #0da4ff;
+        border-top: 1px solid #0da4ff;
+    }
 
-.fc-list-item-title a {
-    display: block;
-    text-transform: capitalize !important;
-    text-overflow: ellipsis;
-}
+    .wraptimeSummary{
+        display: table;
+        width: 100%;
+        padding: 5px 14px;
 
-td.fc-list-item-title.fc-widget-content {
-    padding-right: 4px;
-    padding-left: 0;
-    font-size: 0.9em;
-}
+        .time, .summary {
+            display: table-cell;
+            vertical-align: middle;
+        }
+        .time{
+            width: 90px;
+        }
 
- tr.fc-list-heading .fc-widget-header {
-	padding: 3px 14px;
-	padding-left: 3vw;
+        .summary{
+            position: relative;
+
+            &::before{
+                color: #0da4ff;
+                width: 6px;
+                margin-left: -13px;
+                position: absolute;
+                top: 0;
+                bottom: 0;
+                display: flex;
+                height: 100%;
+                align-items: center;
+                content: "•";
+                font-size: 26px;
+                line-height: 0;
+            }
+        }
+		.ThisDayz {
+			display: none;
+		}
+		.CalMonths {
+			font-size: 0;
+			display: block;
+			width: 100%;
+    	}
+    }
+
+	.CalMonths, .ThisDayz {
+	    display: inline-block;
+	    width: 50%;
+	    font-size: 12px;
+	}
+
+    .ThisDayz {
+        text-align: right;
+    }
 }

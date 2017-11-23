@@ -25,7 +25,8 @@ There is a settings file that you will need to edit, to get the right weather an
  
  
 --- Change Log --- 
- 
+ **1.3.1** 
+* Rebuild Calendar
 
  **1.2.0** 
 * Rebuild Upcoming Forecasts Section  

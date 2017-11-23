@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-// import $ from 'jquery';
 import CryptoItemBit from './CryptoItemBit';
 
 const urlForUsername = cryptocoin => `https://api.coinmarketcap.com/v1/ticker/${cryptocoin}/`
@@ -23,10 +22,10 @@ class CryptoItem extends Component {
 			}
 			return response
 		})
-		.then(d => d.json())
-		.then(d => {
+		.then(data => data.json())
+		.then(data => {
 			this.setState({
-				cryptoData: d[0]
+				cryptoData: data[0]
 			})
 		},() => {
 			this.setState({

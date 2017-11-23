@@ -21,159 +21,48 @@
 	refreshAt(14,11,0);
 
 
-/*  
-	Calendar
-	\src\components\CalendarView.js
-*/ 
-if (CalndUse === "fullCalendar") {
-	$(function(){
-		// Calendar 1
-		$('#calendar1').fullCalendar({
-			defaultView: 'listMonth',
-			allDayText: 'All Day',
+ 
 
-			eventRender: function(event, element, view) {
-				var eventEnd = moment(event.end);
-				var NOW = moment().subtract(6, 'hours');
-				if (eventEnd.diff(NOW, 'seconds') <= 0) {
-					return false;
-				}
-			},
-			googleCalendarApiKey: CalndAPI,
-			events: {
-				googleCalendarId: CalndID
-			}		                
-		});
-		// Calendar 1
-	    // Calendar 2
-			$('#calendar2').fullCalendar({
-				defaultView: 'listMonth',
-				allDayText: 'All Day',
+ function LoadCleanCalendarzzz () {    
+    formatGoogleCalendar.init({
+        calendarUrl: 'https://www.googleapis.com/calendar/v3/calendars/'+ CalndID +'/events?orderBy=startTime&singleEvents=true&key=' + CalndAPI ,
+        past: false,
+        upcoming: true,
+        sameDayTimes: true,
+        pastTopN: 20,
+        recurringEvents: true,
+        sameDayTimes: true,
+        dayNames: true,
+    	upcomingSelector: '#events-upcoming',
+        itemsTagName: 'li',
+        format: ['*date*', '*time*','*summary*'],
+        timeMin: moment().subtract(12, 'hours').format(),
+        timeMax: moment().add(3, 'months').format()
+    });
+ 	console.log("Things Loadind");
+}
 
-				defaultDate: moment().add(1, 'months').endOf('month'),
-				googleCalendarApiKey: CalndAPI,
-				events: {
-					googleCalendarId: CalndID
-				}
-			});
-	    // Calendar 2
-	});
-	// Reload Both Calendars Every 15 mins
-	$(function(){
-		setInterval(oneSecondFunction, 900000);
-		// setInterval(oneSecondFunction, 5000);
-	});
-	function oneSecondFunction() {
-		$('#calendar1').fullCalendar( 'refetchEvents' );
-		$('#calendar2').fullCalendar( 'refetchEvents' );
-	}
-
-	function showpanel() {
-		var TheFuckingDate = moment().format('YYYY-M-DD');
-
-		$('.fc-list-heading').each(function(){
-			if ($(this).data('date') < TheFuckingDate) {
-				$(this).addClass('calendarHide');
-			}
-		});
-	}
-	setInterval(showpanel, 30000)
-
-
- }else{
-
-
-
-
-// Demo Calendar 
-$(function() {
-	var todayDate = moment().startOf('day');
-	var YM = todayDate.format('YYYY-MM');
-	var YESTERDAY = todayDate.clone().subtract(1, 'day').format('YYYY-MM-DD');
-	var TODAY = todayDate.format('YYYY-MM-DD');
-	var TOMORROW = todayDate.clone().add(1, 'day').format('YYYY-MM-DD');
-
-	$('#calendar1').fullCalendar({
-		defaultView: 'listMonth',
-		allDayText: 'All Day',
-		
-		header: {
-			left: 'prev,next today',
-			center: 'title',
-			right: 'month,agendaWeek,agendaDay,listWeek'
-		},
-		editable: true,
-		eventLimit: true, // allow "more" link when too many events
-		navLinks: true,
-		events: [
-			{
-				title: 'All Day Event',
-				url: '',
-				start: YM + '-01'
-			},
-			{
-				title: 'Long Event',
-				url: '',
-				start: YM + '-07',
-				end: YM + '-10'
-			},
-			{
-				id: 999,
-				title: 'Repeating Event',
-				url: '',
-				start: YM + '-09T16:00:00'
-			},
-			{
-				id: 999,
-				title: 'Repeating Event',
-				url: '',
-				start: YM + '-16T16:00:00'
-			},
-			{
-				title: 'Conference',
-				url: '',
-				start: YESTERDAY,
-				end: TOMORROW
-			},
-			{
-				title: 'Meeting',
-				url: '',
-				start: TODAY + 'T10:30:00',
-				end: TODAY + 'T12:30:00'
-			},
-			{
-				title: 'Lunch',
-				url: '',
-				start: TODAY + 'T12:00:00'
-			},
-			{
-				title: 'Meeting',
-				url: '',
-				start: TODAY + 'T14:30:00'
-			},
-			{
-				title: 'Happy Hour',
-				url: '',
-				start: TODAY + 'T17:30:00'
-			},
-			{
-				title: 'Dinner',
-				url: '',
-				start: TODAY + 'T20:00:00'
-			},
-			{
-				title: 'Birthday Party',
-				url: '',
-				start: TOMORROW + 'T07:00:00'
-			},
-			{
-				title: 'Click for Google',
-				url: '',
-				url: 'http://google.com/',
-				start: YM + '-28'
-			}
-		]
-	});
+$(function () {
+	LoadCleanCalendarzzz();
+    setInterval(LoadCleanCalendarzzz, 15000);
 });
 
- }
+
+
+
+function LoadCleanCalendar () {
+ 	var productIds={};
+	$('#events-upcoming li').each(function(){
+	    var prodId = $(this).attr('data-productid');
+	    if(productIds[prodId]){
+	       $(this).addClass("EventsStack");
+	    }else{
+	       productIds[prodId] = true;
+	    }
+	});
+}	
+
+$(function () {
+	LoadCleanCalendar();
+    setInterval(LoadCleanCalendar, 500);
+});
