@@ -21,9 +21,10 @@
 	refreshAt(14,11,0);
 
 
- 
+// Load Calendar
+ function LoadCleanCalendar () {    
+ 	$( "#events-upcoming" ).empty();
 
- function LoadCleanCalendarzzz () {    
     formatGoogleCalendar.init({
         calendarUrl: 'https://www.googleapis.com/calendar/v3/calendars/'+ CalndID +'/events?orderBy=startTime&singleEvents=true&key=' + CalndAPI ,
         past: false,
@@ -42,14 +43,12 @@
 }
 
 $(function () {
-	LoadCleanCalendarzzz();
-    setInterval(LoadCleanCalendarzzz, 15000);
+	LoadCleanCalendar();
+    setInterval(LoadCleanCalendar, 3600000 );
 });
 
-
-
-
-function LoadCleanCalendar () {
+// Clean Up Calendar
+function LoadCleanCalendarClean () {
  	var productIds={};
 	$('#events-upcoming li').each(function(){
 	    var prodId = $(this).attr('data-productid');
@@ -62,6 +61,6 @@ function LoadCleanCalendar () {
 }	
 
 $(function () {
-	LoadCleanCalendar();
-    setInterval(LoadCleanCalendar, 500);
+	LoadCleanCalendarClean();
+    setInterval(LoadCleanCalendarClean, 500);
 });

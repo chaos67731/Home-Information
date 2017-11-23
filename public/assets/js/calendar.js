@@ -12,6 +12,7 @@ var formatGoogleCalendar = (function () {
         var result = [];
         config = settings;
         //Get JSON, parse it, transform into list items and append it to past or upcoming events list
+
         jQuery.getJSON(settings.calendarUrl, function (data) {
             // Remove any cancelled events
             data.items.forEach(function removeCancelledEvents(item) {

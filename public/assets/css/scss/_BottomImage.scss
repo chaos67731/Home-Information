@@ -16,6 +16,21 @@
 	height: 150px;
 	width: 100%;
 	z-index: -1;
+
+		#timer {
+			position: absolute;
+			bottom: 7px;
+			right: 0;
+			font-size: 0.9em;
+			width: calc(50% - 40px);
+			text-align: center;
+		    list-style: none;
+
+			li {
+				display: inline-block;
+				padding-right: 4px;
+			}
+		}	
 }
 
 .PumpkinFace{
@@ -31,19 +46,11 @@
 	background-position: calc(50% + 22px) bottom;
 	background-repeat: no-repeat;
 	background-size: 40px;
+}
 
-		#timer {
-			position: absolute;
-			bottom: 7px;
-			right: 0;
-			font-size: 0.9em;
-			width: calc(50% - 40px);
-			text-align: center;
-		    list-style: none;
-
-			li {
-				display: inline-block;
-				padding-right: 4px;
-			}
-		}
+.X-Mas{
+	background-image: url(../img/Christmas-Tree.png);
+	background-position: calc(50% + 25px) bottom;
+	background-repeat: no-repeat;
+	background-size: 40px;
 }

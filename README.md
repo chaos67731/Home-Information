@@ -1,30 +1,53 @@
+### Works On Windows
+This has been tested on Windows with NPM...  Want to test it on a Mac for me? 
+
+Let me know how it goes! 
+
 ## npm install 
+This installs the needed modules
+
 ## npm start 
-## npm run build  
+Starts the local server, you can view the site at `http://localhost:3000/`
+
+## npm run build
+Makes a build folder that holds the files that you can deploy to your server
+
 ## npm pack 
+This packs up the files in a zip file for you. 
+
  
-There is a settings file that you will need to edit, to get the right weather and connect your Google Calendar.  If you do not, it will show the weather for Las Vegas and it is using dummy data for the Calendar. 
+### Below are the steps to set up your weather and calendar.
  
-``` 
-\public\settings.js 
-``` 
- 
-### Weather  
+#### Weather  
 * Go here https://www.yahoo.com/news/weather 
-* Change locatio  
+* Change location  
 * After the page updates, your numbers should be at the end of the URL
-* Update weathernow and weatherforecasts in /src/Appjs
+* Update weathernow and weatherforecasts in /src/App.js
   * By default it is set to "12795450"
  
-### Google Calendar 
-* Follow the steps on this page from fullcalendar 
-  * https://fullcalendar.io/docs/google_calendar/  
-* In the settings.js file, make sure you change this var ```CalndUse``` to fullCalendar when you are ready to use fullcalendar.io 
+#### Google Calendar 
+* Set your Google Calendar to be public 
+  * https://calendar.google.com/calendar/r
+*  Copy the Calendar ID 
+   *   It will look something like this `duv2qiavgjlin85csle7s7megk@group.calendar.google.com`
+* Get Google Calendar API Key 
+  * https://developers.google.com/maps/documentation/javascript/get-api-key
+* Change the Calendar ID and API Key in the following file
+  * `\public\settings.js`
+
  
  
  
  
---- Change Log --- 
+##### --- Change Log --- 
+
+ **1.3.2** 
+* Calendar gets rebuilt every hour.
+    * Not to happy with the way this is being done. but for now, it works (\js\custom.js:26)
+* Crypto was moved back to using jquery / removing fetch 
+* Changed the countdown to X-Mas
+
+
  **1.3.1** 
 * Rebuild Calendar
 
@@ -55,7 +78,7 @@ There is a settings file that you will need to edit, to get the right weather an
  
 **1.1.5** 
 * Moved Header to react  
-* Moved footer count down to react  
+* Moved footer countdown to react  
 * Started using versions  
  
  
@@ -66,5 +89,3 @@ There is a settings file that you will need to edit, to get the right weather an
  
 ## Screenshot If You Want to See It 
 ![Alt text](/public/assets/img/screenshot.png) 
- 
- 
