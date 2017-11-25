@@ -41,6 +41,10 @@ This packs up the files in a zip file for you.
  
 ##### --- Change Log --- 
 
+ **1.3.4** 
+* Removing old js/scss files
+* Updating jQuery from v2.1.4 to v3.2.1
+
  **1.3.3** 
 * Update Calendar... Again.. 
     * Using `https://github.com/MilanLund/FormatGoogleCalendar`
