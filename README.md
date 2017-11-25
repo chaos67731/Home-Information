@@ -41,6 +41,11 @@ This packs up the files in a zip file for you.
  
 ##### --- Change Log --- 
 
+ **1.3.3** 
+* Update Calendar... Again.. 
+    * Using `https://github.com/MilanLund/FormatGoogleCalendar`
+    * Modified code a bit to better fit the needs of this project
+
  **1.3.2** 
 * Calendar gets rebuilt every hour.
     * Not to happy with the way this is being done. but for now, it works (\js\custom.js:26)

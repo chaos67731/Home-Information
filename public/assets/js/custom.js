@@ -34,10 +34,13 @@
         recurringEvents: true,
         sameDayTimes: true,
         dayNames: true,
+        upcomingTopN: 15,
+        pastTopN: 1,
     	upcomingSelector: '#events-upcoming',
+        pastSelector: '#events-past',
         itemsTagName: 'li',
         format: ['*date*', '*time*','*summary*'],
-        timeMin: moment().subtract(12, 'hours').format(),
+        timeMin: moment().subtract(12, 'days').format(),
         timeMax: moment().add(3, 'months').format()
     });
 }
@@ -56,6 +59,7 @@ function LoadCleanCalendarClean () {
 	       $(this).addClass("EventsStack");
 	    }else{
 	       productIds[prodId] = true;
+	       $(this).addClass("EventsStackNOT");
 	    }
 	});
 }	

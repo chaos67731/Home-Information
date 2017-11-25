@@ -12,7 +12,7 @@
         }
     }
 /* The UL  */
-#events-upcoming {
+#events-upcoming, #events-past {
     border-right: 1px solid #0da4ff;
 
     li {
@@ -33,6 +33,7 @@
         padding: 3px 14px;
         border-bottom: 1px solid #0da4ff;
         border-top: 1px solid #0da4ff;
+        font-size: 11px;
     }
 
     .wraptimeSummary{
@@ -78,11 +79,13 @@
 
 	.CalMonths, .ThisDayz {
 	    display: inline-block;
-	    width: 50%;
 	    font-size: 12px;
 	}
-
+    .CalMonths{
+        width: 60%;
+    }
     .ThisDayz {
         text-align: right;
+        width: 40%;
     }
 }

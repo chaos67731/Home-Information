@@ -4,6 +4,7 @@ class CalendarView extends Component{
   render(){
     return(
 		<div id="CalendarView">
+			<ul id="events-past"></ul>
 			<ul id="events-upcoming"></ul>
 		</div>
     );
