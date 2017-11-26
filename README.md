@@ -7,7 +7,7 @@ Let me know how it goes!
 > https://chaos67731.github.io/Home-Information/
 
 
-##Usage
+## Usage
 ### `npm install` 
 >This installs the needed modules
 
