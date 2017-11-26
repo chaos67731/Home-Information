@@ -1,0 +1,91 @@
+/*
+  Calendar
+*/
+/* Things to hide  */
+.date .theTime{
+    display: none !important;
+}
+    .time {
+        font-size: 0;
+            .theTime {
+            font-size: $font-size * .80;
+        }
+    }
+/* The UL  */
+#events-upcoming, #events-past {
+    border-right: 1px solid #0da4ff;
+
+    li {
+        font-size:  $font-size * .80;
+        position: relative;
+
+        &.EventsStack {
+            display: block;
+            .date {
+             display: none !important;
+            }    
+        }
+    }
+
+    .date {
+        background: $DarkText;
+        display: block;
+        padding: 3px 14px;
+        border-bottom: 1px solid #0da4ff;
+        border-top: 1px solid #0da4ff;
+        font-size: 11px;
+    }
+
+    .wraptimeSummary{
+        display: table;
+        width: 100%;
+        padding: 5px 14px;
+
+        .time, .summary {
+            display: table-cell;
+            vertical-align: middle;
+        }
+        .time{
+            width: 90px;
+        }
+
+        .summary{
+            position: relative;
+
+            &::before{
+                color: #0da4ff;
+                width: 6px;
+                margin-left: -13px;
+                position: absolute;
+                top: 0;
+                bottom: 0;
+                display: flex;
+                height: 100%;
+                align-items: center;
+                content: "•";
+                font-size: 26px;
+                line-height: 0;
+            }
+        }
+		.ThisDayz {
+			display: none;
+		}
+		.CalMonths {
+			font-size: 0;
+			display: block;
+			width: 100%;
+    	}
+    }
+
+	.CalMonths, .ThisDayz {
+	    display: inline-block;
+	    font-size: 12px;
+	}
+    .CalMonths{
+        width: 60%;
+    }
+    .ThisDayz {
+        text-align: right;
+        width: 40%;
+    }
+}

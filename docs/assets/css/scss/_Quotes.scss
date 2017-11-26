@@ -1,0 +1,18 @@
+/*
+	News
+*/
+#js-Quotes {
+	list-style: 	none;
+	text-align: 	center;
+	margin: 		10px;
+	font-size: 		$md-font-size;
+	position: 		relative;
+	display: 		flex;
+	height: 		calc(100% - 181px);
+	align-items: 	center;
+	justify-content: center;
+	
+	li {
+		position: absolute;
+	}
+}
