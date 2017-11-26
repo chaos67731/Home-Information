@@ -3,21 +3,28 @@ This has been tested on Windows with NPM...  Want to test it on a Mac for me?
 
 Let me know how it goes! 
 
-## npm install 
-This installs the needed modules
+## Demo
+> https://chaos67731.github.io/Home-Information/
 
-## npm start 
-Starts the local server, you can view the site at `http://localhost:3000/`
 
-## npm run build
-Makes a build folder that holds the files that you can deploy to your server
+##Usage
+### `npm install` 
+>This installs the needed modules
 
-## npm pack 
-This packs up the files in a zip file for you. 
+### `npm start` 
+> Starts the local server, you can view the site at `http://localhost:3000/`
+
+### `npm run build`
+> Makes a build folder that holds the files that you can deploy to your server
+
+### `npm pack` 
+> This packs up the files in a zip file for you. 
 
  
-### Below are the steps to set up your weather and calendar.
- 
+
+
+## Setting Up
+##### Below are the steps to set up your weather and calendar.
 #### Weather  
 * Go here https://www.yahoo.com/news/weather 
 * Change location  
@@ -39,7 +46,7 @@ This packs up the files in a zip file for you.
  
  
  
-##### --- Change Log --- 
+## Change Log
 
  **1.3.4** 
 * Removing old js/scss files
