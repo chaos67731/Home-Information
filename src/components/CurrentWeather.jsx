@@ -56,7 +56,11 @@ class CurrentWeather extends Component {
 		}
 
 		// Hide wind info if below 5mph
-		if($('#CurrentWeatherSide .TheWindSpeed').html() < "5"){
+		if($('#CurrentWeatherSide .TheWindSpeed').html() === "1" || 
+		   $('#CurrentWeatherSide .TheWindSpeed').html() === "2" || 
+		   $('#CurrentWeatherSide .TheWindSpeed').html() === "3" || 
+		   $('#CurrentWeatherSide .TheWindSpeed').html() === "4" || 
+		   $('#CurrentWeatherSide .TheWindSpeed').html() === "5"){
 			$("#CurrentWeatherSide .Speed").hide();
 		}else{
 			$("#CurrentWeatherSide .Speed").show();
@@ -69,20 +73,20 @@ class CurrentWeather extends Component {
 	setInterval(function() { HideShowWeather(); }, 5000);
 	// End jQuery
 	
-	if(this.state.requestFailed) return(
-		<div id="CurrentWeather">
-			<div id="TheCurrentWeather">
-				<center>
-					<h2>
-						<br />
-						Something Went wrong.... 
-						<br />
-						Did you forget to pay the internet bill??
-					</h2>					
-				</center>
-			</div>
-		</div>
-	);
+	// if(this.state.requestFailed) return(
+	// 	<div id="CurrentWeather">
+	// 		<div id="TheCurrentWeather">
+	// 			<center>
+	// 				<h2>
+	// 					<br />
+	// 					Something Went wrong.... 
+	// 					<br />
+	// 					Did you forget to pay the internet bill??
+	// 				</h2>					
+	// 			</center>
+	// 		</div>
+	// 	</div>
+	// );
 	if(!this.state.weatherData) return <p>Loading...</p>
 
     return(

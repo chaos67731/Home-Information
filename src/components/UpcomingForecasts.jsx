@@ -42,7 +42,7 @@ class UpcomingForecasts extends Component{
   render(){
 
 
-	if(this.state.requestFailed) return <p>Failed...</p>
+	// if(this.state.requestFailed) return <p>Failed...</p>
 	if(!this.state.weatherData) return <p>Loading...</p>
     return(
 		<div id="UpcomingForecasts">
