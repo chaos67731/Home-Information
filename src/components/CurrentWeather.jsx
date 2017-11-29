@@ -2,8 +2,6 @@ import React, { Component } from 'react';
 import WeatherIcon 			from "./parts/WeatherIcon";
 import WindDirection 		from "./parts/WindDirection";
 
-import $ 					from 'jquery';
-
 const urlForUsername = weathernow => `https://query.yahooapis.com/v1/public/yql?q=select+*+from+weather.forecast+where+woeid=${weathernow}&format=json`
 
 class CurrentWeather extends Component {
@@ -44,24 +42,6 @@ class CurrentWeather extends Component {
 	}
 
   render(){
-  	// jQuery
-  	function HideShowWeather() {
-  		// Hide Wind Chilld if current temp is the same or above 
-		if($('.js-CurrentWeatherTemp').html() === $('.js-CurrentWeatherWindChill').html()){
-			$("#TheWindChill").hide();
-		}else if($('.js-CurrentWeatherTemp').html() < $('.js-CurrentWeatherWindChill').html()){
-			$("#TheWindChill").hide();
-		}else{
-			$("#TheWindChill").show();
-		}
-	}
-
-	$(function() {
-		HideShowWeather();
-	});
-	setInterval(function() { HideShowWeather(); }, 1000);
-	// End jQuery
-	
 	// if(this.state.requestFailed) return(
 	// 	<div id="CurrentWeather">
 	// 		<div id="TheCurrentWeather">
@@ -94,7 +74,7 @@ class CurrentWeather extends Component {
 				Curent <span className="temp">
 					<span className="js-CurrentWeatherTemp">{this.state.weatherData.item.condition.temp}</span>°
 				</span>
-				<div id="TheWindChill">
+				<div id="TheWindChill" data-windchill={this.state.weatherData.wind.chill - this.state.weatherData.item.condition.temp}>
 					Windchill: <span className="js-CurrentWeatherWindChill">{this.state.weatherData.wind.chill}</span>°
 				</div>	
 			</div>

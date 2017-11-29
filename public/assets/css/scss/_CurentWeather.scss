@@ -44,6 +44,11 @@
 		}
 		#TheWindChill {
 			margin-top: -1em;
+			display: none;
+			
+			&[data-windchill*='-']{
+				display: block;
+			}
 		}
 	}
 	/* forecast 1 */
