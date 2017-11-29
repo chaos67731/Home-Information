@@ -12,7 +12,6 @@ class BottomTwo extends Component{
 			<div className="BottomTwo-Item BottomTwo-ItemOne">
 				<CalendarView />
 			</div>
-
 			<div className="BottomTwo-Item">
 				<Crypto header="Show me the money!"/>
 				<Quotes />

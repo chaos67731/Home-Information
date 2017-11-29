@@ -47,8 +47,8 @@ class CryptoItemsJS extends Component{
 	            }
 	        });
 	    }
-	    // Reload Crypto Every 30 Seconds
-	    setInterval(UpdateCtyptoTicker, 30000);
+	    // Reload Crypto Every 2 minutes 
+	    setInterval(UpdateCtyptoTicker, 120000);
 	    UpdateCtyptoTicker();
 	});
  

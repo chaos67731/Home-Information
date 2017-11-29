@@ -36,11 +36,10 @@ class UpcomingForecasts extends Component{
 
 	componentDidMount(){
 		this.fetchWeatherResult()
-		setInterval(this.fetchWeatherResult, 60000) 
+		setInterval(this.fetchWeatherResult, 300000) 
 	}
 
   render(){
-
 
 	// if(this.state.requestFailed) return <p>Failed...</p>
 	if(!this.state.weatherData) return <p>Loading...</p>

@@ -38,7 +38,6 @@ class Crypto extends Component{
 			</h4>
 			<div id="data">
 				<CryptoItemsJS />
- 
 			</div>
 		</div>
     );

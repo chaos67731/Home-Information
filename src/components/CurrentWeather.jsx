@@ -40,7 +40,7 @@ class CurrentWeather extends Component {
 
 	componentDidMount(){
 		this.fetchWeatherResult()
-		setInterval(this.fetchWeatherResult, 60000) 
+		setInterval(this.fetchWeatherResult, 300000) 
 	}
 
   render(){
@@ -54,23 +54,12 @@ class CurrentWeather extends Component {
 		}else{
 			$("#TheWindChill").show();
 		}
-
-		// Hide wind info if below 5mph
-		if($('#CurrentWeatherSide .TheWindSpeed').html() === "1" || 
-		   $('#CurrentWeatherSide .TheWindSpeed').html() === "2" || 
-		   $('#CurrentWeatherSide .TheWindSpeed').html() === "3" || 
-		   $('#CurrentWeatherSide .TheWindSpeed').html() === "4" || 
-		   $('#CurrentWeatherSide .TheWindSpeed').html() === "5"){
-			$("#CurrentWeatherSide .Speed").hide();
-		}else{
-			$("#CurrentWeatherSide .Speed").show();
-		}		
 	}
 
 	$(function() {
 		HideShowWeather();
 	});
-	setInterval(function() { HideShowWeather(); }, 5000);
+	setInterval(function() { HideShowWeather(); }, 1000);
 	// End jQuery
 	
 	// if(this.state.requestFailed) return(
@@ -112,7 +101,7 @@ class CurrentWeather extends Component {
 			<div className="CurrentlyItem" id="CurrentWeatherSide">
 				<div className="highTemp"><b>High</b> <span className="high">{this.state.weatherData.item.forecast[0].high}°</span></div>
 				<div className="lowTemp"><b>Low</b> <span className="low">{this.state.weatherData.item.forecast[0].low}°</span></div>
-				<div className="Speed">
+				<div className="Speed" data-speed={this.state.weatherData.wind.speed}>
 					<b>Wind</b> <span className="TheWindSpeed">{this.state.weatherData.wind.speed}</span> <small>mph</small>
 					<small id="TheDirection" data-direction={this.state.weatherData.wind.direction}>
 						<WindDirection theWindDirection={this.state.weatherData.wind.direction}/>
