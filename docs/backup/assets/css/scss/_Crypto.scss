@@ -1,0 +1,34 @@
+#data {
+    padding: 4px 12px;
+}
+
+.CryptoItem {
+	list-style: none;
+	display: flex;
+
+		li {
+			display: inline-block;
+			font-size: $sm-font-size;
+
+				&:first-child {
+					padding-right: 	10px;
+					width: 			70px;
+				}
+
+			span {
+				letter-spacing: 1px;
+			}
+		}
+
+	/* Per Cent Change */
+	.PreCentChange {
+			text-align: 	right;
+			margin-left: 	auto;
+			padding-left: 	.5em;
+			letter-spacing: 1px;
+
+			span {
+				letter-spacing: .5px;
+			}		
+	}
+}

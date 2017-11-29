@@ -4,6 +4,12 @@
 #CurrentWeather {
     position: relative;
 	color: $DarkText;
+
+	.Speed{
+		&[data-speed='1'],&[data-speed='2'],&[data-speed='3'],&[data-speed='4'],&[data-speed='5']{
+			display: none;
+		}	
+	}
 }
 	#TheCurrentWeather {
 		display: table;
