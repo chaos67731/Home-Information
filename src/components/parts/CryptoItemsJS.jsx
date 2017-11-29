@@ -52,6 +52,17 @@ class CryptoItemsJS extends Component{
 	    UpdateCtyptoTicker();
 	});
  
+ 	function ganttEach() {
+		var divList = $(".CryptoItem");
+		divList.sort(function(b, a){ return $(a).data("sort")-$(b).data("sort")});
+		$("#data").html(divList);
+	}
+
+	$(function() {
+		ganttEach();
+	});
+	setInterval(function() { ganttEach(); }, 15000);
+
     return(
 		<div id="Cryptodata">
 			<ul className="CryptoItem" data-sort="BTCPriceChangeID" id="BTCPriceChangeID">

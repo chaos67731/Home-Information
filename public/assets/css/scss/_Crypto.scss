@@ -31,4 +31,8 @@
 				letter-spacing: .5px;
 			}		
 	}
+
+	&[data-sort*='-'] .PreCentChange{
+		color: $NagColor;
+	}
 }
