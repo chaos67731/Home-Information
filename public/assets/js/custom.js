@@ -68,3 +68,15 @@ $(function () {
 	LoadCleanCalendarClean();
     setInterval(LoadCleanCalendarClean, 500);
 });
+
+
+// function ganttEach() {
+// 	var divList = $(".CryptoItem");
+// 	divList.sort(function(b, a){ return $(a).data("sort")-$(b).data("sort")});
+// 	$("#data").html(divList);
+// }
+
+// $(function() {
+// 	ganttEach();
+// });
+// setInterval(function() { ganttEach(); }, 15000);

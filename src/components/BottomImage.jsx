@@ -5,13 +5,12 @@ class BottomImage extends Component{
 	constructor(props) {
 		super(props);
 		this.state = { 
-			deadline: 'December 25, 2017',
+			deadline: 'January 08, 2018',
 		};
 	}
 	render(){
-
     return(
-		<div className="X-Mas BottomCountDown" id="BottomImage">
+		<div className="SchoolStarts BottomCountDown" id="BottomImage">
 			 <Clock deadline={ this.state.deadline }/>
 		</div>
     );

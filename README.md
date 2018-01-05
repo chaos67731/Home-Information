@@ -1,11 +1,5 @@
-### Works On Windows
-This has been tested on Windows with NPM...  Want to test it on a Mac for me? 
-
-Let me know how it goes! 
-
 ## Demo
 > https://chaos67731.github.io/Home-Information/
-
 
 ## Usage
 ### `npm install` 
@@ -21,8 +15,6 @@ Let me know how it goes!
 > This packs up the files in a zip file for you. 
 
  
-
-
 ## Setting Up
 ##### Below are the steps to set up your weather and calendar.
 #### Weather  

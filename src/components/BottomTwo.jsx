@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 
 import CalendarView from "./CalendarView";
 import Crypto 		from "./Crypto";
+// import CryptoNew 		from "./CryptoNew";
 import Quotes 		from "./Quotes";
 
 class BottomTwo extends Component{
@@ -13,6 +14,7 @@ class BottomTwo extends Component{
 				<CalendarView />
 			</div>
 			<div className="BottomTwo-Item">
+				{/* <CryptoNew header="Show me the money!"/> */}
 				<Crypto header="Show me the money!"/>
 				<Quotes />
 			</div>
