@@ -1,1 +1,357 @@
-﻿@font-face{font-family:OSP-DIN;src:url(../font/OSP-DIN.ttf)}*{padding:0;margin:0;box-sizing:border-box}body{background:#000;color:#dcdcdc;font-family:'OSP-DIN', Arial, sans-serif;margin:0px;padding:0px;overflow:hidden;letter-spacing:0px;font-size:16px;font-weight:100}a{pointer-events:none;cursor:default}.blue #CurrentWeather,.blue .fc-event-dot{background-color:#0da4ff}.blue .CryptoItem li:first-child,.blue .TheForecast .TheDesc{color:#0da4ff}.blue .fc-unthemed td,.blue .fc-unthemed .fc-list-heading td{border-color:#0da4ff}#TimeDate{height:5vh;line-height:5vh;font-size:0;display:flex}#TimeDate div{width:50%;font-size:3vh}#TimeDate #TheTime,#TimeDate #time{text-align:left;padding-left:3vw}#TimeDate #TheDate,#TimeDate #date{text-align:right;padding-right:3vw}#CurrentWeather{position:relative;color:#222}#CurrentWeather .Speed[data-speed='1'],#CurrentWeather .Speed[data-speed='2'],#CurrentWeather .Speed[data-speed='3'],#CurrentWeather .Speed[data-speed='4'],#CurrentWeather .Speed[data-speed='5']{display:none}#TheCurrentWeather{display:table;width:100%;table-layout:fixed;height:25vh}#TheCurrentWeather .CurrentlyItem{display:table-cell;vertical-align:middle;text-align:center}#TheCurrentWeather #CurrentTemp{width:40%}#CurrentIcon .icon{font-size:70.4px}#CurrentTemp .temp{display:block;font-size:70.4px}#CurrentTemp #TheWindChill{margin-top:-1em;display:none}#CurrentTemp #TheWindChill[data-windchill*='-']{display:block}#CurrentWeatherSide div{text-align:left;padding-left:8px;font-size:20px}#CurrentWeatherSide div b{font-weight:100;display:inline-block;width:45px;position:relative}#CurrentWeatherSide div b:after{content:" :";position:absolute;right:0}#CurrentWeatherSide #TheDirection{display:block;margin-left:45px;margin-top:-4px;font-size:12.8px}#TheRiseSet{font-size:0px;position:absolute;bottom:0;left:0;right:0}#TheRiseSet .RiseSetItem{font-size:12.8px;width:50%;display:inline-block}#TheRiseSet .RiseSetItem.TheSunrise{text-align:right;padding-right:14px}#TheRiseSet .RiseSetItem.TheSunset{text-align:left;padding-left:14px}#UpcomingForecasts{display:flex;align-items:center;height:25vh}#UpcomingForecasts .TheForecast{flex-grow:5;text-align:center}#UpcomingForecasts .TheForecastDate{font-weight:100;font-size:16px;padding-bottom:4px}#UpcomingForecasts .TheIcon{padding:4px 0;display:inline-block;width:100%}#UpcomingForecasts .TheIcon i{font-size:36.8px}#UpcomingForecasts .TheDesc{margin-top:-4px}#UpcomingForecasts .ThehighTemp.ThelowTemp{font-size:12.8px}#BottomTwo{display:flex;font-size:20px;font-weight:100}.BottomTwo-Item{width:50%;height:45vh}.BottomTwo-Item h4{font-weight:100;font-size:20px}.date .theTime{display:none !important}.time{font-size:0}.time .theTime{font-size:12.8px}#events-upcoming,#events-past{border-right:1px solid #0da4ff}#events-upcoming li,#events-past li{font-size:12.8px;position:relative}#events-upcoming li.EventsStack,#events-past li.EventsStack{display:block}#events-upcoming li.EventsStack .date,#events-past li.EventsStack .date{display:none !important}#events-upcoming .date,#events-past .date{background:#222;display:block;padding:3px 14px;border-bottom:1px solid #0da4ff;border-top:1px solid #0da4ff;font-size:11px}#events-upcoming .wraptimeSummary,#events-past .wraptimeSummary{display:table;width:100%;padding:5px 14px}#events-upcoming .wraptimeSummary .time,#events-upcoming .wraptimeSummary .summary,#events-past .wraptimeSummary .time,#events-past .wraptimeSummary .summary{display:table-cell;vertical-align:middle}#events-upcoming .wraptimeSummary .time,#events-past .wraptimeSummary .time{width:90px}#events-upcoming .wraptimeSummary .summary,#events-past .wraptimeSummary .summary{position:relative}#events-upcoming .wraptimeSummary .summary::before,#events-past .wraptimeSummary .summary::before{color:#0da4ff;width:6px;margin-left:-13px;position:absolute;top:0;bottom:0;display:flex;height:100%;align-items:center;content:"•";font-size:26px;line-height:0}#events-upcoming .wraptimeSummary .ThisDayz,#events-past .wraptimeSummary .ThisDayz{display:none}#events-upcoming .wraptimeSummary .CalMonths,#events-past .wraptimeSummary .CalMonths{font-size:0;display:block;width:100%}#events-upcoming .CalMonths,#events-upcoming .ThisDayz,#events-past .CalMonths,#events-past .ThisDayz{display:inline-block;font-size:12px}#events-upcoming .CalMonths,#events-past .CalMonths{width:60%}#events-upcoming .ThisDayz,#events-past .ThisDayz{text-align:right;width:40%}#data{padding:4px 12px}.CryptoItem{list-style:none;display:flex}.CryptoItem li{display:inline-block;font-size:12.8px}.CryptoItem li:first-child{padding-right:10px;width:70px}.CryptoItem li span{letter-spacing:1px}.CryptoItem .PreCentChange{text-align:right;margin-left:auto;padding-left:.5em;letter-spacing:1px}.CryptoItem .PreCentChange span{letter-spacing:.5px}.CryptoItem[data-sort*='-'] .PreCentChange{color:#d14836}#js-Quotes{list-style:none;text-align:center;margin:10px;font-size:20px;position:relative;display:flex;height:calc(100% - 181px);align-items:center;justify-content:center}#js-Quotes li{position:absolute}@keyframes flickerAnimation{0%{opacity:0.13}50%{opacity:0.03}100%{opacity:0.13}}#BottomImage{position:fixed;bottom:0;right:0;left:0;height:150px;width:100%;z-index:-1}#BottomImage #timer{position:absolute;bottom:7px;right:0;font-size:0.9em;width:calc(50% - 40px);text-align:center;list-style:none}#BottomImage #timer li{display:inline-block;padding-right:4px}.PumpkinFace{background-image:url(../img/PumpkinFace.jpg);background-position:bottom right;background-repeat:no-repeat;background-size:200px;animation:flickerAnimation 20s infinite}.Turkey{background-image:url(../img/Turkey.png);background-position:calc(50% + 22px) bottom;background-repeat:no-repeat;background-size:40px}.X-Mas{background-image:url(../img/Christmas-Tree.png);background-position:calc(50% + 25px) bottom;background-repeat:no-repeat;background-size:40px}.SchoolStarts{background-image:url(../img/BackToSchool.png);background-position:calc(50% + 25px) bottom;background-repeat:no-repeat;background-size:40px}.mlkDay{background-image:url(../img/mlkDay.png);background-position:calc(50% + 25px) bottom;background-repeat:no-repeat;background-size:40px}
+@charset "UTF-8";
+/*
+	Colors
+*/
+/*
+	Font Size
+*/
+@font-face {
+  font-family: OSP-DIN;
+  src: url(../font/OSP-DIN.ttf); }
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box; }
+
+/*Start Body*/
+body {
+  background: #000;
+  color: #dcdcdc;
+  font-family: 'OSP-DIN', Arial, sans-serif;
+  margin: 0px;
+  padding: 0px;
+  overflow: hidden;
+  letter-spacing: 0px;
+  font-size: 16px;
+  font-weight: 100; }
+
+a {
+  pointer-events: none;
+  cursor: default; }
+
+/*
+	Blue Colors
+*/
+.blue #CurrentWeather, .blue .fc-event-dot {
+  background-color: #0da4ff; }
+
+.blue .CryptoItem li:first-child, .blue .TheForecast .TheDesc {
+  color: #0da4ff; }
+
+.blue .fc-unthemed td, .blue .fc-unthemed .fc-list-heading td {
+  border-color: #0da4ff; }
+
+/*
+ Time and Date
+*/
+#TimeDate {
+  height: 5vh;
+  line-height: 5vh;
+  font-size: 0;
+  display: flex; }
+  #TimeDate div {
+    width: 50%;
+    font-size: 3vh; }
+  #TimeDate #TheTime, #TimeDate #time {
+    text-align: left;
+    padding-left: 3vw; }
+  #TimeDate #TheDate, #TimeDate #date {
+    text-align: right;
+    padding-right: 3vw; }
+
+/*
+	Current Weather
+*/
+#CurrentWeather {
+  position: relative;
+  color: #222222; }
+  #CurrentWeather .Speed[data-speed='1'], #CurrentWeather .Speed[data-speed='2'], #CurrentWeather .Speed[data-speed='3'], #CurrentWeather .Speed[data-speed='4'], #CurrentWeather .Speed[data-speed='5'] {
+    display: none; }
+
+#TheCurrentWeather {
+  display: table;
+  width: 100%;
+  table-layout: fixed;
+  height: 25vh; }
+  #TheCurrentWeather .CurrentlyItem {
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center; }
+  #TheCurrentWeather #CurrentTemp {
+    width: 40%; }
+
+/* Current Icon */
+#CurrentIcon .icon {
+  font-size: 70.4px; }
+
+/* Current Temp */
+#CurrentTemp .temp {
+  display: block;
+  font-size: 70.4px; }
+#CurrentTemp #TheWindChill {
+  margin-top: -1em;
+  display: none; }
+  #CurrentTemp #TheWindChill[data-windchill*='-'] {
+    display: block; }
+
+/* forecast 1 */
+#CurrentWeatherSide div {
+  text-align: left;
+  padding-left: 8px;
+  font-size: 20px; }
+  #CurrentWeatherSide div b {
+    font-weight: 100;
+    display: inline-block;
+    width: 45px;
+    position: relative; }
+    #CurrentWeatherSide div b:after {
+      content: " :";
+      position: absolute;
+      right: 0; }
+#CurrentWeatherSide #TheDirection {
+  display: block;
+  margin-left: 45px;
+  margin-top: -4px;
+  font-size: 12.8px; }
+
+/*
+	Sunset / Sun Rise
+*/
+#TheRiseSet {
+  font-size: 0px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0; }
+  #TheRiseSet .RiseSetItem {
+    font-size: 12.8px;
+    width: 50%;
+    display: inline-block; }
+    #TheRiseSet .RiseSetItem.TheSunrise {
+      text-align: right;
+      padding-right: 14px; }
+    #TheRiseSet .RiseSetItem.TheSunset {
+      text-align: left;
+      padding-left: 14px; }
+
+/*
+	Upcoming Forecasts
+*/
+#UpcomingForecasts {
+  display: flex;
+  align-items: center;
+  height: 25vh;
+  /* forcast Date */
+  /* Icon */
+  /* desc */
+  /*High Temp / Low Temp*/ }
+  #UpcomingForecasts .TheForecast {
+    flex-grow: 5;
+    text-align: center; }
+  #UpcomingForecasts .TheForecastDate {
+    font-weight: 100;
+    font-size: 16px;
+    padding-bottom: 4px; }
+  #UpcomingForecasts .TheIcon {
+    padding: 4px 0;
+    display: inline-block;
+    width: 100%; }
+    #UpcomingForecasts .TheIcon i {
+      font-size: 36.8px; }
+  #UpcomingForecasts .TheDesc {
+    margin-top: -4px; }
+  #UpcomingForecasts .ThehighTemp.ThelowTemp {
+    font-size: 12.8px; }
+
+/*
+ Bottom Two
+*/
+#BottomTwo {
+  display: flex;
+  font-size: 20px;
+  font-weight: 100; }
+
+.BottomTwo-Item {
+  width: 50%;
+  height: 45vh; }
+  .BottomTwo-Item h4 {
+    font-weight: 100;
+    font-size: 20px; }
+
+/*
+  Calendar
+*/
+/* Things to hide  */
+.date .theTime {
+  display: none !important; }
+
+.time {
+  font-size: 0; }
+  .time .theTime {
+    font-size: 12.8px; }
+
+/* The UL  */
+#events-upcoming, #events-past {
+  border-right: 1px solid #0da4ff; }
+  #events-upcoming li, #events-past li {
+    font-size: 12.8px;
+    position: relative; }
+    #events-upcoming li.EventsStack, #events-past li.EventsStack {
+      display: block; }
+      #events-upcoming li.EventsStack .date, #events-past li.EventsStack .date {
+        display: none !important; }
+  #events-upcoming .date, #events-past .date {
+    background: #222222;
+    display: block;
+    padding: 3px 14px;
+    border-bottom: 1px solid #0da4ff;
+    border-top: 1px solid #0da4ff;
+    font-size: 11px; }
+  #events-upcoming .wraptimeSummary, #events-past .wraptimeSummary {
+    display: table;
+    width: 100%;
+    padding: 5px 14px; }
+    #events-upcoming .wraptimeSummary .time, #events-upcoming .wraptimeSummary .summary, #events-past .wraptimeSummary .time, #events-past .wraptimeSummary .summary {
+      display: table-cell;
+      vertical-align: middle; }
+    #events-upcoming .wraptimeSummary .time, #events-past .wraptimeSummary .time {
+      width: 90px; }
+    #events-upcoming .wraptimeSummary .summary, #events-past .wraptimeSummary .summary {
+      position: relative; }
+      #events-upcoming .wraptimeSummary .summary::before, #events-past .wraptimeSummary .summary::before {
+        color: #0da4ff;
+        width: 6px;
+        margin-left: -13px;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        display: flex;
+        height: 100%;
+        align-items: center;
+        content: "•";
+        font-size: 26px;
+        line-height: 0; }
+    #events-upcoming .wraptimeSummary .ThisDayz, #events-past .wraptimeSummary .ThisDayz {
+      display: none; }
+    #events-upcoming .wraptimeSummary .CalMonths, #events-past .wraptimeSummary .CalMonths {
+      font-size: 0;
+      display: block;
+      width: 100%; }
+  #events-upcoming .CalMonths, #events-upcoming .ThisDayz, #events-past .CalMonths, #events-past .ThisDayz {
+    display: inline-block;
+    font-size: 12px; }
+  #events-upcoming .CalMonths, #events-past .CalMonths {
+    width: 60%; }
+  #events-upcoming .ThisDayz, #events-past .ThisDayz {
+    text-align: right;
+    width: 40%; }
+
+#data {
+  padding: 4px 12px; }
+
+.CryptoItem {
+  list-style: none;
+  display: flex;
+  /* Per Cent Change */ }
+  .CryptoItem li {
+    display: inline-block;
+    font-size: 12.8px; }
+    .CryptoItem li:first-child {
+      padding-right: 10px;
+      width: 70px; }
+    .CryptoItem li span {
+      letter-spacing: 1px; }
+  .CryptoItem .PreCentChange {
+    text-align: right;
+    margin-left: auto;
+    padding-left: .5em;
+    letter-spacing: 1px; }
+    .CryptoItem .PreCentChange span {
+      letter-spacing: .5px; }
+  .CryptoItem[data-sort*='-'] .PreCentChange {
+    color: #d14836; }
+
+/*
+	News
+*/
+#js-Quotes {
+  list-style: none;
+  text-align: center;
+  margin: 10px;
+  font-size: 20px;
+  position: relative;
+  display: flex;
+  height: calc(100% - 181px);
+  align-items: center;
+  justify-content: center; }
+  #js-Quotes li {
+    position: absolute; }
+
+/*
+	BottomImage
+*/
+@keyframes flickerAnimation {
+  0% {
+    opacity: 0.13; }
+  50% {
+    opacity: 0.03; }
+  100% {
+    opacity: 0.13; } }
+#BottomImage {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  height: 150px;
+  width: 100%;
+  z-index: -1; }
+  #BottomImage #timer {
+    position: absolute;
+    bottom: 7px;
+    right: 0;
+    font-size: 0.9em;
+    width: calc(50% - 40px);
+    text-align: center;
+    list-style: none; }
+    #BottomImage #timer li {
+      display: inline-block;
+      padding-right: 4px; }
+
+.PumpkinFace {
+  background-image: url(../img/PumpkinFace.jpg);
+  background-position: bottom right;
+  background-repeat: no-repeat;
+  background-size: 200px;
+  animation: flickerAnimation 20s infinite; }
+
+.Turkey {
+  background-image: url(../img/Turkey.png);
+  background-position: calc(50% + 22px) bottom;
+  background-repeat: no-repeat;
+  background-size: 40px; }
+
+.X-Mas {
+  background-image: url(../img/Christmas-Tree.png);
+  background-position: calc(50% + 25px) bottom;
+  background-repeat: no-repeat;
+  background-size: 40px; }
+
+.SchoolStarts {
+  background-image: url(../img/BackToSchool.png);
+  background-position: calc(50% + 25px) bottom;
+  background-repeat: no-repeat;
+  background-size: 40px; }
+
+.mlkDay {
+  background-image: url(../img/mlkDay.png);
+  background-position: calc(50% + 25px) bottom;
+  background-repeat: no-repeat;
+  background-size: 40px; }
+
+.AvengersInfinityWar {
+  background-image: url(../img/AvengersInfinityWar.png);
+  background-position: calc(50% + 55px) bottom;
+  background-repeat: no-repeat;
+  background-size: 100px; }
+
+/*# sourceMappingURL=style.css.map */

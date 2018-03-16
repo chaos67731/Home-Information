@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import $ from 'jquery';
-import CryptoItemsJS from './parts/CryptoItemsJS';
-// import CryptoItem from './parts/CryptoItem';
+// import CryptoItemsJS from './parts/CryptoItemsJS';
+import CryptoItem from './parts/CryptoItem';
 
 class Crypto extends Component{
 
@@ -33,13 +33,13 @@ class Crypto extends Component{
 				</center>	
 			</h4>
 			<div id="data">
-				<CryptoItemsJS />
-				{/* <CryptoItem cryptocoin="bitcoin" />
+				{/* <CryptoItemsJS /> */}
+				<CryptoItem cryptocoin="bitcoin" />
 				<CryptoItem cryptocoin="ethereum" />
 				<CryptoItem cryptocoin="ripple" />
 				<CryptoItem cryptocoin="iconomi" />
 				<CryptoItem cryptocoin="litecoin" />
-				<CryptoItem cryptocoin="bitcoin-cash" /> */}
+				<CryptoItem cryptocoin="bitcoin-cash" />
 			</div>
 		</div>
     );
