@@ -140,4 +140,4 @@ bundle exec middleman build
 
 ## Screenshot If You Want to See It
 
-![Alt text](/public/assets/img/screenshot.png)
+![Alt text](/data/screenshot.png)
