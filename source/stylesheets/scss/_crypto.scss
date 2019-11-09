@@ -1,0 +1,27 @@
+.coinlore-list-widget table,
+.coinlore-list-widget table tbody,
+.coinlore-list-widget table tbody tr,
+.coinlore-list-widget table tbody tr td,
+.coinlore-list-widget table tbody tr td a {
+  border: 0px solid transparent !important;
+  box-shadow: 0 0 0 transparent !important;
+  font-weight: 100 !important;
+  font-size: 95% !important;
+}
+
+.coinlore-list-widget table tbody tr td {
+  padding-top: 2px !important;
+  padding-bottom: 2px !important;
+  &:last-of-type:before {
+    content: "$";
+  }
+  span:last-of-type {
+    font-size: 80%;
+    padding: 0 0.2em;
+  }
+}
+
+.coinlore-list-widget table tbody tr:last-of-type,
+.coinlore-list-widget table tbody tr img {
+  display: none !important;
+}

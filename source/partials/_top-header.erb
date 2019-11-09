@@ -1,0 +1,30 @@
+<div class="flex justify-between pv2 f4 fw5">
+    <div id="current-time" class="ttl">
+        <%# The Time %>
+    </div>
+    <div id="current-date">
+        <%# The Date %>
+    </div>
+</div>
+
+<script>
+    $(function() {
+        // This is using moment.js if you want to use javascript only / use the code below
+        $('#current-time').text(moment().format('h:mm:ss a'));
+        $('#current-date').text(moment().format('dddd, MMMM Do'));
+    });
+
+    // Javascript Code
+    // // The Time
+    // var display=setInterval(function(){Time()},0);
+    // function Time(){
+    //     var date=new Date();
+    //     var time=date.toLocaleTimeString();
+    //     document.getElementById("current-time").innerHTML=time;
+    // }
+
+    // // The Date
+    // var current_date = new Date();
+    // var options = { weekday: 'long', month: 'long', day: 'numeric' };
+    // document.getElementById("current-date").innerHTML=current_date.toLocaleDateString('en-US', options);
+</script>

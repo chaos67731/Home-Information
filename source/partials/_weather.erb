@@ -1,0 +1,26 @@
+<div class="flex justify-between bb tc" id="info_weather">
+    <div class="w-100">
+        <%#  %>
+        <div class="flex items-center pv4">
+          <%= partial "partials/weather/current-weather" %>
+        </div>
+        <div class="flex forecast-weather">
+          <% 5.times do |num| %>
+            <%= partial("partials/weather/forecast-weather", :locals => { :day => num + 1 } ) %>
+          <% end %> 
+        </div>
+         <%#  %>
+    </div>
+</div>
+<script>
+  $(window).on("load", function() {
+    $.getJSON(
+      "https://api.darksky.net/forecast/<%= data.custom.darksky_api_key || data.site.darksky_api_key %>/" +
+        "<%= data.site.darksky_longitude %>" +
+        "," +
+        "<%= data.site.darksky_latitude %>" +
+        "?callback=?",
+      getForecast
+    );
+  });
+</script>

@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>
+      <%= data.site.site_name %>
+    </title>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <meta http-equiv="refresh" content="3600" />
+    <%= stylesheet_link_tag 'style'  %>
+    <%= javascript_include_tag 'jquery-3.4.1.min' %>
+    <%= javascript_include_tag 'moment'   %>
+    <%= javascript_include_tag 'calendar' %>
+    <%= javascript_include_tag 'script' %>
+    <script>
+      var CalndAPI = "<%= data.custom.calendar_API || data.site.calendar_API %>";
+      var CalndID = "<%= data.custom.calendar_ID || data.site.calendar_ID %>";
+    </script>
+    <%= javascript_include_tag 'weather' %>
+  </head>
+  <body class="body flex vh-100 white bg-black overflow-hidden sans-serif">
+    <main class="main wrap flex flex-column">
+      <%= yield %>
+    </main>
+  </body>
+</html>

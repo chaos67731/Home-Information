@@ -1,24 +1,17 @@
 {
-  "name": "HomeWeather",
-  "version": "1.3.4",
-  "private": true,
+  "name": "windsor-online",
+  "version": "1.0.0",
+  "description": "Use : live-server",
+  "main": "index.php",
   "dependencies": {
-    "jquery": "^3.3.1",
-    "moment": "^2.22.2",
-    "moment-timezone": "^0.5.20",
     "node-sass": "^4.9.0",
-    "react": "^16.4.1",
-    "react-dom": "^16.4.1",
-    "react-live-clock": "^2.0.3",
-    "react-moment": "^0.7.6",
-    "react-scripts": "1.0.17",
-    "parallelshell": "^3.0.2",
-    "whatwg-fetch": "^2.0.4"
+    "parallelshell": "^3.0.2"
   },
+  "devDependencies": {},
   "scripts": {
-    "start": "parallelshell \"node-sass --watch public/assets/css/scss/style.scss -o public/assets/css/ --output-style compressed\" \"react-scripts start\"",
-    "build": "react-scripts build",
-    "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject"
-  }
+    "test": "test",
+    "start": "parallelshell \"node-sass --watch source/stylesheets/scss/style.scss -o source/stylesheets --output-style nested\""
+  },
+  "author": "",
+  "license": "ISC"
 }

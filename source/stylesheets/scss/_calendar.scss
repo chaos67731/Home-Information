@@ -1,0 +1,93 @@
+/*
+  Calendar
+*/
+/* Things to hide  */
+.date .theTime {
+  display: none !important;
+}
+.time {
+  font-size: 0;
+  .theTime {
+    font-size: 14px * 0.8;
+  }
+}
+/* The UL  */
+
+#events-upcoming,
+#events-past {
+  border-right: 1px solid #2d2d2d;
+  border-left: 1px solid #2d2d2d;
+
+  li {
+    font-size: 14px * 0.8;
+    position: relative;
+
+    &.EventsStack {
+      display: block;
+      .date {
+        display: none !important;
+      }
+    }
+  }
+
+  .date {
+    background: #000;
+    display: block;
+    padding: 10px 14px;
+    border-bottom: 1px solid #2d2d2d;
+    border-top: 1px solid #2d2d2d;
+    font-size: 11px;
+    font-weight: 900;
+  }
+
+  .wraptimeSummary {
+    display: table;
+    width: 100%;
+    padding: 5px 14px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .time,
+    .summary {
+      display: table-cell;
+      vertical-align: middle;
+    }
+    .time {
+      width: 90px;
+    }
+
+    .summary {
+      position: relative;
+
+      &::before {
+        color: #0da4ff;
+        content: "•";
+        margin-right: 5px;
+        transform: scale(1.5);
+        display: inline-block;
+      }
+    }
+    .ThisDayz {
+      display: none;
+    }
+    .CalMonths {
+      font-size: 0;
+      display: block;
+      width: 100%;
+    }
+  }
+
+  .CalMonths,
+  .ThisDayz {
+    display: inline-block;
+    font-size: 12px;
+  }
+  .CalMonths {
+    width: 60%;
+  }
+  .ThisDayz {
+    text-align: right;
+    width: 40%;
+  }
+}

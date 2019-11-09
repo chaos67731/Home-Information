@@ -1,0 +1,61 @@
+@keyframes flickerAnimation {
+  0% {
+    opacity: 0.85;
+  }
+  50% {
+    opacity: 0.2;
+  }
+  100% {
+    opacity: 0.85;
+  }
+}
+
+.PumpkinFace {
+  background-image: url(/images/events/PumpkinFace.jpg);
+  background-position: bottom right;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  animation: flickerAnimation 20s infinite;
+}
+
+.Turkey {
+  background-image: url(/images/events/Turkey.png);
+  background-position: calc(50% + 22px) bottom;
+  background-repeat: no-repeat;
+  background-size: 40px;
+}
+
+.X-Mas {
+  background-image: url(/images/events/Christmas-Tree.png);
+  background-position: calc(50% + 25px) bottom;
+  background-repeat: no-repeat;
+  background-size: 40px;
+}
+
+.SchoolStarts {
+  background-image: url(/images/events/BackToSchool.png);
+  background-position: calc(50% + 25px) bottom;
+  background-repeat: no-repeat;
+  background-size: 40px;
+}
+
+.mlkDay {
+  background-image: url(/images/events/mlkDay.png);
+  background-position: calc(50% + 25px) bottom;
+  background-repeat: no-repeat;
+  background-size: 40px;
+}
+
+.AvengersInfinityWar {
+  background-image: url(/images/events/AvengersInfinityWar.png);
+  background-position: calc(50% + 55px) bottom;
+  background-repeat: no-repeat;
+  background-size: 100px;
+}
+
+.FourthOfJuly {
+  background-image: url(/images/events/4th-of-july.png);
+  background-position: calc(50% + 27px) bottom;
+  background-repeat: no-repeat;
+  background-size: 50px;
+}

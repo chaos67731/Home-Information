@@ -1,0 +1,27 @@
+---
+# Do Cool Stuff
+---
+<%#  %>
+<%= partial "partials/top-header" %>
+<%= partial "partials/weather" %>
+<div class="flex flex-auto">
+    <div class="w-50">
+        <%= partial "partials/google-calendar" %>
+    </div>
+    <div class="w-50 flex flex-column justify-between ">
+        <%= partial "partials/cryptocurrency" %>
+        <%#  %>
+        <div class="pa3 tc">
+            <% data.quotes.quotes.each do |f| %>
+                <%= partial("partials/quotes", :locals => {   
+                    :quote => f.quote, 
+                }) %>
+            <% end %>        
+        </div>
+        <%#  %>
+        <div class="count-down tc pb2">
+             <%= image_tag data.site.count_down_img, :width => '80',:height => '80', :class => 'absolute bottom-0 right-0 z-0' %>
+            <%= partial "partials/count-down" %>
+        </div>
+    </div>
+</div>

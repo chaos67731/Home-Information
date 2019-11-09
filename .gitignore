@@ -2,9 +2,11 @@
 *.sublime-project
 *.sublime-workspace
 public/settings.js
+public/*
 node_modules/*
 node_modules
 package-lock\.json
 \.backup/
 build/
 info\.txt
+custom.json
