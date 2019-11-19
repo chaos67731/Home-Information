@@ -8,11 +8,13 @@
 </div>
 
 <script>
-    $(function() {
-        // This is using moment.js if you want to use javascript only / use the code below
+    function update() {
         $('#current-time').text(moment().format('h:mm:ss a'));
         $('#current-date').text(moment().format('dddd, MMMM Do'));
-    });
+    }
+
+    setInterval(update, 1000);
+    
 
     // Javascript Code
     // // The Time
