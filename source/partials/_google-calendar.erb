@@ -1,6 +1,132 @@
 <div id="CalendarView">
     <%# <ul id="events-past"></ul> %>
+    <div id="contain-app-title">
+        coronavirus
+    </div>
+    <div id="contain-app">
+      <div class="">
+          <span id="item-contain-confirmed"></span>
+          <span class="digits" id="contain-confirmed"></span>
+          <span>
+              <span id="contain-confirmed-percent"></span>
+          </span>
+      </div>
+      <!-- -->
+      <div class="">
+          <span id="item-contain-active">Active</span>
+          <span class="digits" id="contain-active"></span>
+          <span>
+              <span id="contain-active-percent"></span>
+          </span>
+      </div>
+      <!-- -->
+      <div class="">
+          <span id="item-contain-recovered"></span>
+          <span class="digits" id="contain-recovered"></span>
+          <span>
+              <span id="contain-recovered-percent"></span>
+          </span>
+      </div>
+      <!-- -->
+      <div class="">
+          <span id="item-contain-dead"></span>
+          <span class="digits" id="contain-dead"></span>
+          <span>
+              <span id="contain-dead-percent"></span>
+          </span>
+      </div>
+    </div>    
     <ul id="events-upcoming" class="ma0 pa0 list">
         <%#  %>
     </ul>
+ 
 </div>
+
+<script>
+  // https://apimarket.nubentos.com/store/site/pages/application.jag?name=DefaultApp&appId=178&tenant=nubentos.com
+  // Digits - Add Commas
+  $.fn.digits = function(){ 
+      return this.each(function(){ 
+          $(this).text( $(this).text().replace(/(\d)(?=(\d\d\d)+(?!\d))/g, "$1,") ); 
+      })
+  }
+  // Set Precent 
+  function GetPrecent(fullNumber,percentNumber,pointOver,contentID) {
+      var TheRecoveredPercent =
+        parseFloat(parseInt(percentNumber, 10) * 100) /
+        parseInt(fullNumber, 10);
+      $(contentID).text(TheRecoveredPercent.toFixed(pointOver) + "%");        
+  }
+  // 
+  
+  $(function() {
+    // Auth Token
+    var Authorization = "Bearer 541c66c9-7941-3e8e-92f9-0a9ce4d13a13";
+    // Setting up API Settings
+    var ncovapi = {
+      Confirmed: {
+        api_url:
+          "https://apigw.nubentos.com:443/t/nubentos.com/ncovapi/1.0.0/cases",
+        div_id: "contain-confirmed",
+        var_id: "containConfirmed",
+        path: "data[0].cases",
+      },
+      Recovered: {
+        api_url:
+          "https://apigw.nubentos.com:443/t/nubentos.com/ncovapi/1.0.0/recovered",
+        div_id: "contain-recovered",
+        var_id: "containRecovered",
+        path: "data[0].data",
+      },
+      Deaths: {
+        api_url:
+          "https://apigw.nubentos.com:443/t/nubentos.com/ncovapi/1.0.0/deaths",
+        div_id: "contain-dead",
+        var_id: "containDead",
+        path: "data[0].data",
+      }
+    };
+    // Loop Over API Calls
+    $.each(ncovapi, function(key, value) {
+      $.ajax({
+        url: value.api_url,
+        headers: { Authorization: Authorization },
+        beforeSend: function(format) {
+          format.overrideMimeType("application/json; charset=x-user-defined");
+        }
+      }).done(function(data) {
+        // Set Var of count path
+        // Need a better way to do this
+        var StatNumber = value.path === "data[0].data" ? data[0].data : data[0].cases;
+        // Item Name
+        $("#item-" + value.div_id).text(key);
+        // Item Stat
+        $("#" + value.div_id).text(StatNumber);
+        // Set & Get Confirmed/Recovered/Deaths Stat
+        window[value.var_id]  = StatNumber;
+      });
+      //
+    });
+    
+    // End Loop Over API Calls
+    // I am setting a time out - There has to be a better way to do this
+    setTimeout(function() {
+      //  Set & Get Active Stat
+      var containActive = containConfirmed - containRecovered - containDead;
+      // Active Cases
+      $("#contain-active").text(containActive);
+      // Percent Recovered
+      GetPrecent(containConfirmed,containRecovered,1,"#contain-recovered-percent");
+      // Percent Dead
+      GetPrecent(containConfirmed,containDead,1,"#contain-dead-percent");
+      //  Percent Active
+      GetPrecent(containConfirmed,containActive,1,"#contain-active-percent");
+      //  Percent Active
+      GetPrecent("7442000000",containConfirmed,5,"#contain-confirmed-percent");
+      //
+      //  Add Comma
+      $(".digits").digits();
+    }, 2000);
+  //
+});
+</script>

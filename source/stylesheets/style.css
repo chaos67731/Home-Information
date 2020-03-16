@@ -7024,6 +7024,9 @@ code, .code {
     text-align: right;
     width: 40%; }
 
+.coinlore-list-widget a {
+  pointer-events: none !important; }
+
 .coinlore-list-widget table,
 .coinlore-list-widget table tbody,
 .coinlore-list-widget table tbody tr,
@@ -7097,3 +7100,25 @@ code, .code {
   background-position: calc(50% + 27px) bottom;
   background-repeat: no-repeat;
   background-size: 50px; }
+
+#contain-app-title {
+  color: #f3402b;
+  text-align: center;
+  text-transform: uppercase;
+  padding: 5px 0;
+  font-size: 20px; }
+
+div#contain-app {
+  padding-bottom: 10px;
+  font-size: 80%; }
+  div#contain-app div {
+    display: flex;
+    padding: 0 10px 4px;
+    justify-content: space-between; }
+  div#contain-app span {
+    width: 33%;
+    text-align: center; }
+    div#contain-app span:first-of-type {
+      text-align: left; }
+    div#contain-app span:last-of-type {
+      text-align: right; }

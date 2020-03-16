@@ -1,9 +1,10 @@
+<%= image_tag data.count_down.count_down_img, :width => '80',:height => '80', :class => 'absolute bottom-0 right-0 z-0' %>
 <div id="count-down-count" class="relative z-1"></div>
 
 <script>
 // Set the date we're counting down to
 // Set 
-var countDownDate = new Date("<%= data.site.count_down_date %>").getTime();
+var countDownDate = new Date("<%= data.count_down.count_down_date %>").getTime();
 
 // Update the count down every 1 second
 var x = setInterval(function() {
@@ -27,7 +28,7 @@ var x = setInterval(function() {
   // If the count down is finished, write some text 
   if (distance < 0) {
     clearInterval(x);
-    document.getElementById("count-down-count").innerHTML = "<%= data.site.count_down_end_message %>";
+    document.getElementById("count-down-count").innerHTML = "<%= data.count_down.count_down_end_message %>";
   }
 }, 1000);
 </script>

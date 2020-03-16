@@ -26,8 +26,10 @@
 
 ///// middleman
 middleman build
-
 middleman build --verbose
+
+# Use this one
+
 bundle exec middleman build
 
 ## Setting Up

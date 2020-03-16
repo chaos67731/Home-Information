@@ -59,3 +59,32 @@
   background-repeat: no-repeat;
   background-size: 50px;
 }
+//
+#contain-app-title {
+  color: #f3402b;
+  text-align: center;
+  text-transform: uppercase;
+  padding: 5px 0;
+  font-size: 20px;
+}
+
+div#contain-app {
+  padding-bottom: 10px;
+  font-size: 80%;
+  div {
+    display: flex;
+    padding: 0 10px 4px;
+    justify-content: space-between;
+  }
+  span {
+    width: 33%;
+    text-align: center;
+    &:first-of-type {
+      text-align: left;
+    }
+    &:last-of-type {
+      // font-weight: 700;
+      text-align: right;
+    }
+  }
+}
