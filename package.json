@@ -4,7 +4,7 @@
   "description": "Use : live-server",
   "main": "index.php",
   "dependencies": {
-    "node-sass": "^4.9.0",
+    "node-sass": "^4.13.1",
     "parallelshell": "^3.0.2"
   },
   "devDependencies": {},
