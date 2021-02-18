@@ -4,13 +4,12 @@
   "description": "Use : live-server",
   "main": "index.php",
   "dependencies": {
-    "node-sass": "^4.9.0",
-    "parallelshell": "^3.0.2"
+    "node-sass": "^4.14"
   },
   "devDependencies": {},
   "scripts": {
     "test": "test",
-    "start": "parallelshell \"node-sass --watch source/stylesheets/scss/style.scss -o source/stylesheets --output-style nested\""
+    "start": "node-sass --watch source/stylesheets/scss/style.scss -o source/stylesheets --output-style nested"
   },
   "author": "",
   "license": "ISC"

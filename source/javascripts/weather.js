@@ -14,7 +14,7 @@ var date = now.toDateString() + " " + now.getHours() + ":" + minutes;
 
 // HTML data display from JSON.
 var getForecast = function(data) {
-  console.log(data);
+  // console.log(data);
   $("#summary").html(data.currently.summary);
   $("#degree").html(tempConvert(data.currently.temperature));
   //

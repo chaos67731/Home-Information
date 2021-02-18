@@ -21,6 +21,8 @@ set :build_dir, 'public/'
 # 
 set :site_name, "Home Information"
 # <%= settings.site_name %>
+set :site_cache, "234234234234"
+# <%= settings.site_cache %>
 
 # With alternative layout
 # page '/path/to/file.html', layout: 'other_layout'
@@ -52,7 +54,7 @@ set :site_name, "Home Information"
 configure :build do
   activate :minify_css
   activate :minify_javascript
-  activate :asset_hash
+  # activate :asset_hash
 end
 
 #   

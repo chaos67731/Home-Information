@@ -1,5 +1,5 @@
 $(function() {
-  console.log("ready!");
+  // console.log("ready!");
 });
 
 // Quote ----

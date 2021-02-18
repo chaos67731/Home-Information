@@ -7117,7 +7117,7 @@ div#contain-app {
     justify-content: space-between; }
   div#contain-app span {
     width: 33%;
-    text-align: center; }
+    text-align: right; }
     div#contain-app span:first-of-type {
       text-align: left; }
     div#contain-app span:last-of-type {
