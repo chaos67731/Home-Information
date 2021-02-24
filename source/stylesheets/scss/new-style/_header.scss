@@ -1,0 +1,26 @@
+body.body {
+  font-size: 28px;
+  font-weight: 500;
+}
+//
+div#topWeatherDate {
+  height: 25vh;
+  background-repeat: no-repeat;
+  background-size: 18vh;
+  display: flex;
+}
+
+.topWeatherDateItem {
+  width: 50%;
+  outline: 1px solid red;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+}
+//
+.topHeaderMainHeading {
+  font-size: 2em;
+  font-weight: 900;
+}

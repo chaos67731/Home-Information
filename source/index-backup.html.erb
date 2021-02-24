@@ -1,0 +1,26 @@
+---
+# Do Cool Stuff
+---
+<%#  %>
+<%= partial "partials/top-header" %>
+<%= partial "partials/weather" %>
+<div class="flex flex-auto">
+    <div class="w-50">
+        <%= partial "partials/google-calendar" %>
+    </div>
+    <div class="w-50 flex flex-column justify-between ">
+        <%= partial "partials/cryptocurrency" %>
+        <%#  %>
+        <div class="pa3 tc">
+            <% data.quotes.quotes.each do |f| %>
+                <%= partial("partials/quotes", :locals => {   
+                    :quote => f.quote, 
+                }) %>
+            <% end %>        
+        </div>
+        <%#  %>
+        <div class="count-down tc pb2" style="display: flex; justify-content: start; flex-direction: row-reverse; align-items: center;">
+            <%= partial "partials/count-down" %>
+        </div>
+    </div>
+</div>

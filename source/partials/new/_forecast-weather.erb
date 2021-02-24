@@ -1,0 +1,4 @@
+
+<% 7.times do |num| %>
+    <%= partial("partials/weather/forecast-weather", :locals => { :day => num + 1 } ) %>
+<% end %> 

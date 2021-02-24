@@ -1,0 +1,29 @@
+<div class="topHeader" id="topWeatherDate">
+    <div class="topTopLeft topWeatherDateItem">
+        <%= partial "partials/new/top-left" %>
+    </div>
+    <div class="topTopRight topWeatherDateItem" style="">
+        <%= partial "partials/new/top-right" %>
+    </div>
+</div>
+ 
+<%# <img class="filter-icon-01 w4" src="/images/weather-icons/weather.svg" id="main-icon" style="width:90px;"> %>
+<script>
+  $(window).on("load", function() {
+    $.getJSON(
+      "https://api.darksky.net/forecast/<%= data.custom.darksky_api_key || data.site.darksky_api_key %>/" +
+        "<%= data.site.darksky_longitude %>" +
+        "," +
+        "<%= data.site.darksky_latitude %>" +
+        "?callback=?",
+      getForecast
+    );
+  });
+</script>
+<script>
+    function update() {
+        $('#current-time').text(moment().format('h:mm:ss a'));
+        $('#current-date').text(moment().format('dddd, MMMM Do'));
+    }
+    setInterval(update, 1000);
+</script>
