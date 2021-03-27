@@ -1,4 +1,8 @@
 <div class="self-center w-33">
+    <img class="filter-icon-01 w4" src="/images/weather-icons/weather.svg" id="main-icon" style="width:90px;">
+</div>
+<%#  %>
+<div class="self-center w-33">
     <div class="f2">
         <span id="degree">0</span>
         <span class="conv-deg"> &deg;C</span>    
@@ -8,38 +12,7 @@
         /
         <span id="degree-low">0</span>&deg;F
     </div>
-</div>
-<%#  %>
-<div class="self-center w-33">
-    <img class="filter-icon-01 w4" src="/images/weather-icons/weather.svg" id="main-icon" style="width:90px;">
-</div>
-<%#  %>
-<div class="self-center w-33 pl4 flex flex-column">
-    <div class="f6 fw1 flex justify-between">
-        <span class="">
-            Humidity: 
-        </span>        
-        <div>
-            <span class="main-info fw9" id="humidity">0</span> %
-        </div>
-    </div>
-    <div class="f6 fw1 flex justify-between">
-        <span class="">
-            Rain Chance:
-        </span>        
-        <div>
-            <span class="main-info fw9" id="precip">0</span> %
-        </div>
-    </div>
-    <div class="f6 fw1 flex justify-between">
-        <span class="">
-            Wind Speed:
-        </span>        
-        <div>
-            <span class="main-info fw9" id="wind-speed">0</span><span id=units> km/h</span>
-        </div>
-    </div>  
-    <div class="f6 fw1 flex justify-between mt3 relative sunrise-sunset">
+    <div class="f6 fw1 flex mt3 relative sunrise-sunset" style="justify-content: space-evenly;">
         <div class="">
             <img class="filter-icon-01 w4" src="/images/weather-icons/sunrise.png" style="width:45%;">
             <div class="main-info fw1 ttl f7" id="sunriseTime">0</div>
@@ -48,5 +21,33 @@
             <img class="filter-icon-01 w4" src="/images/weather-icons/sunset.png" style="width:45%;">
             <div class="main-info fw1 ttl f7" id="sunsetTime">0</div>
         </div>
+    </div>    
+</div>
+<%#  %>
+
+<div class="self-center w-33 pl4 flex flex-column">
+    <div class="f6 fw1 flex justify-between">
+        <span class="">
+            Humidity: 
+        </span>        
+        <div>
+            <span class="main-info fw5" id="humidity">0</span> %
+        </div>
     </div>
+    <div class="f6 fw1 flex justify-between">
+        <span class="">
+            Rain Chance:
+        </span>        
+        <div>
+            <span class="main-info fw5" id="precip">0</span> %
+        </div>
+    </div>
+    <div class="f6 fw1 flex justify-between">
+        <span class="">
+            Wind Speed:
+        </span>        
+        <div>
+            <span class="main-info fw5" id="wind-speed">0</span><span id=units> km/h</span>
+        </div>
+    </div>  
 </div>

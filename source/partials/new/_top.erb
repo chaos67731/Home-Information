@@ -1,10 +1,58 @@
 <div class="topHeader" id="topWeatherDate">
-    <div class="topTopLeft topWeatherDateItem">
-        <%= partial "partials/new/top-left" %>
+    <div class="topHeaderItem topHeaderItem_day">
+      <div id="todaysDayIs"></div>
     </div>
-    <div class="topTopRight topWeatherDateItem" style="">
-        <%= partial "partials/new/top-right" %>
+    <%#  %>
+    <div class="topHeaderItem topHeaderItemWithSub topHeaderItem_month_temp">
+      <div class="topHeaderSubItem">
+        <div class="theCurrentTemp topHeaderMainHeading">
+          <span id="degree">0</span>
+          <sup class="conv-deg"> &deg;C</sup>    
+            <div class="todayHighLow">
+              <span><span id="degree-high">0</span><sup>&deg;F</sup></span>
+              <span>/</span>
+              <span><span id="degree-low">0</span><sup>&deg;F</sup></span>
+            </div>
+        </div>
+      
+      </div>
+      <div class="topHeaderSubItem">
+        <div id="theMonthAndDateIs"></div>
+      </div>      
     </div>
+    <%#  %>
+    <div class="topHeaderItem topHeaderItemBottom">
+      <div class="topHeaderSubItem">
+       
+            <span class="topPill">
+                <img class="topPillImage" src="/images/icons/Humidity.svg" style="height:1em; width: 1em;" />
+                <span class="main-info" id="humidity">0</span> %
+            </span>
+            <span class="topPill">
+                <img class="topPillImage" src="/images/icons/Umbrella.svg" style="height:1em; width: 1em;" />
+                <span class="main-info" id="precip">0</span> %
+            </span>
+            <span class="topPill">
+                <img class="topPillImage" src="/images/icons/Wind.svg" style="height:1em; width: 1em;" />
+                <span class="main-info" id="wind-speed">0</span><span id=units> km/h</span>
+            </span>
+          
+      </div>
+      <div class="topHeaderSubItem sunRiseSet">
+        
+            <div class="sunRiseSetItem topPill">
+                <img class="filter-icon-01" src="/images/weather-icons/sunrise.png" />
+                <div class="main-info" id="sunriseTime">0</div>
+            </div>
+            <div class="sunRiseSetItem topPill">
+                <img class="filter-icon-01" src="/images/weather-icons/sunset.png" />
+                <div class="main-info" id="sunsetTime">0</div>
+            </div>
+           
+      </div>
+    </div>
+        <%# <%= partial "partials/new/top-left" %> 
+        <%# <%= partial "partials/new/top-right" %> 
 </div>
  
 <%# <img class="filter-icon-01 w4" src="/images/weather-icons/weather.svg" id="main-icon" style="width:90px;"> %>
@@ -22,8 +70,14 @@
 </script>
 <script>
     function update() {
-        $('#current-time').text(moment().format('h:mm:ss a'));
-        $('#current-date').text(moment().format('dddd, MMMM Do'));
+        $('#todaysDayIs').text(moment().format('dddd'));
+        $('#theMonthAndDateIs').text(moment().format('MMMM D'));
+
+
+
+
+        
+        // $('#current-date').text(moment().format('dddd, MMMM Do'));
     }
     setInterval(update, 1000);
 </script>

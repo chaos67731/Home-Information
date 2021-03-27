@@ -1,32 +1,19 @@
-<div class="flex justify-between pv2 f4 fw5">
-    <div id="current-time" class="ttl">
-        <%# The Time %>
-    </div>
-    <div id="current-date">
-        <%# The Date %>
+ 
+<div class="wrap">
+    <div class="flex justify-between pt3 pb2 f5 fw6">
+        <div id="current-time" class="ttl">
+            <%# The Time %>
+        </div>
+        <div id="current-date">
+            <%# The Date %>
+        </div>
     </div>
 </div>
-
+ 
 <script>
     function update() {
         $('#current-time').text(moment().format('h:mm:ss a'));
         $('#current-date').text(moment().format('dddd, MMMM Do'));
     }
-
     setInterval(update, 1000);
-    
-
-    // Javascript Code
-    // // The Time
-    // var display=setInterval(function(){Time()},0);
-    // function Time(){
-    //     var date=new Date();
-    //     var time=date.toLocaleTimeString();
-    //     document.getElementById("current-time").innerHTML=time;
-    // }
-
-    // // The Date
-    // var current_date = new Date();
-    // var options = { weekday: 'long', month: 'long', day: 'numeric' };
-    // document.getElementById("current-date").innerHTML=current_date.toLocaleDateString('en-US', options);
 </script>

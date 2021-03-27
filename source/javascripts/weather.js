@@ -41,6 +41,7 @@ var getForecast = function(data) {
 
   checkIconAnimated(data.currently.icon);
   $("#main-icon").attr("src", iconPath);
+  $("#topWeatherDate").css("background-image", "url(" + iconPath + ")");
   //
   dailyData();
   //

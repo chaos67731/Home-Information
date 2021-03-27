@@ -2,25 +2,23 @@
 # Do Cool Stuff
 ---
 <%#  %>
-<%= partial "partials/top-header" %>
-<%= partial "partials/weather" %>
-<div class="flex flex-auto">
-    <div class="w-50">
-        <%= partial "partials/google-calendar" %>
+
+ <div class="vh-100 flex flex-column">
+    <div class="topHeight" style="background: #000;"> 
+        <%= partial "partials/new/top" %>
     </div>
-    <div class="w-50 flex flex-column justify-between ">
-        <%= partial "partials/cryptocurrency" %>
-        <%#  %>
-        <div class="pa3 tc">
-            <% data.quotes.quotes.each do |f| %>
-                <%= partial("partials/quotes", :locals => {   
-                    :quote => f.quote, 
-                }) %>
-            <% end %>        
-        </div>
-        <%#  %>
-        <div class="count-down tc pb2" style="display: flex; justify-content: start; flex-direction: row-reverse; align-items: center;">
-            <%= partial "partials/count-down" %>
-        </div>
+      <div class="flex forecast-weather"> 
+       <%= partial "partials/new/forecast-weather" %> 
+    </div> 
+    <div class="mainContent">
+         <div>
+            <div>
+                <%# <%= partial "partials/new/google-calendar" %>
+            </div>
+            <div>
+                <%# <%= partial "partials/new/cryptocurrency" %> 
+            </div>
+         </div>
     </div>
-</div>
+ </div>
+ 
